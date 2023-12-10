@@ -1,0 +1,32 @@
+set hidden true
+set ignorecase true
+
+cmd mkdir ${{
+	printf "Directory Name: "
+	read ans
+	mkdir $ans
+}}
+
+cmd mkfile ${{
+	printf "File Name: "
+	read ans
+	touch $ans
+}}
+
+map n updir
+map o open
+map e down
+map i up
+
+map w half-up
+map f half-down
+
+map s delete
+map a mkfile
+map r mkdir
+
+map E push 5e
+map I push 5i
+
+cmd open $nvim $fx
+
