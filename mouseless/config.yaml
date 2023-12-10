@@ -1,0 +1,312 @@
+﻿devices:
+# - "/dev/input/by-id/usb-Usb_KeyBoard_Usb_KeyBoard-event-kbd"
+# this is executed when mouseless starts
+# startCommand: ""
+baseMouseSpeed: 500.0
+baseScrollSpeed: 20.0
+
+layers:
+# I activate the mouse layer by pressing alt+,. Perhaps it would be easier to immediately map "alt+comma: ..." if there was an opportunity. However, i liked to use "intermediate" layers.
+- name: initial
+  passThrough: true
+  bindings:
+    leftalt: toggle-layer alt
+    rightalt: toggle-layer alt
+    leftmeta: multi leftmeta; toggle-layer meta
+    rightmeta: multi rightmeta; toggle-layer meta
+    leftctrl: multi leftctrl; toggle-layer block
+    rightctrl: multi rightctrl; toggle-layer block
+    leftshift: multi leftshift; toggle-layer block
+    rightshift: multi rightshift; toggle-layer block
+
+# This layer is used to block combinations when an "undesirable" modifier is pressed. I don't know whether it is worth using such an invention:
+- name: block
+  passThrough: true
+
+# It may be used as a "block" layer, so I'll probably remove it:
+- name: meta
+  passThrough: true
+
+# It will be used if it is possible to return after releasing the meta key:
+- name: altmeta
+  passThrough: true
+
+- name: alt
+  passThrough: false
+  bindings:
+    j: layer aim
+    comma: layer mouse
+    e: down
+    w: up
+    q: right
+    r: left
+    apostrophe: enter
+    k: leftalt+k
+    slash: multi leftalt; slash
+    i: esc
+    m: leftalt+m
+    t: rightalt+t
+    y: leftalt+y
+    u: multi leftalt+u; layer active
+    h: leftalt+h
+    l: leftalt+l
+    semicolon: leftalt+semicolon
+    o: leftalt+o
+    
+    # !!!!!!! It is not possible to switch to the meta layer because the "alt" layer was called using "toggle-layer", not "layer". :(
+    leftmeta: toggle-layer meta
+
+- name: mouse
+  passThrough: false
+  bindings:
+    leftalt: toggle-layer mouse-alt
+    rightalt: toggle-layer mouse-alt
+    m: layer save-mark
+    apostrophe: layer goto-mark
+    s: layer initial
+    j: move -1  0
+    k: move  0  1
+    l: move  0 -1
+    semicolon: move  1 0
+    w: scroll up
+    e: scroll down
+    z: speed 0.15
+    a: speed 0.25
+    capslock: layer initial
+    leftshift: speed 0.1
+    f: button left
+    d: button right
+    r: button middle
+      #    c: exec xdotool mousemove 480  270
+      #    v: exec xdotool mousemove 1440 270
+      #    x: exec xdotool mousemove 480  810
+      #    z: exec xdotool mousemove 1440 810
+
+- name: mouse-alt
+  passThrough: false
+  bindings:
+    j: layer aim
+
+- name: aim
+  bindings:
+    f:         multi layer mouse; exec xdotool mousemove 239  135
+    d:         multi layer mouse; exec xdotool mousemove 719  135
+    s:         multi layer mouse; exec xdotool mousemove 1199 135
+    a:         multi layer mouse; exec xdotool mousemove 1679 135
+
+    v:         multi layer mouse; exec xdotool mousemove 239  405
+    c:         multi layer mouse; exec xdotool mousemove 719  405
+    x:         multi layer mouse; exec xdotool mousemove 1199 405
+    z:         multi layer mouse; exec xdotool mousemove 1679 405
+
+    j:         multi layer mouse; exec xdotool mousemove 239  675
+    k:         multi layer mouse; exec xdotool mousemove 719  675
+    l:         multi layer mouse; exec xdotool mousemove 1199 675
+    semicolon: multi layer mouse; exec xdotool mousemove 1679 675
+
+    m:         multi layer mouse; exec xdotool mousemove 239  945
+    comma:     multi layer mouse; exec xdotool mousemove 719  945
+    dot:       multi layer mouse; exec xdotool mousemove 1199 945
+    slash:     multi layer mouse; exec xdotool mousemove 1679 945
+
+- name: advanced-mouse
+  passThrough: true
+
+- name: save-mark
+  passThrough: false
+  bindings:
+    q:          multi exec /home/danil/.config/mouseless/save-mark.sh q; layer mouse
+    w:          multi exec /home/danil/.config/mouseless/save-mark.sh w; layer mouse
+    e:          multi exec /home/danil/.config/mouseless/save-mark.sh e; layer mouse
+    r:          multi exec /home/danil/.config/mouseless/save-mark.sh r; layer mouse
+    t:          multi exec /home/danil/.config/mouseless/save-mark.sh t; layer mouse
+    y:          multi exec /home/danil/.config/mouseless/save-mark.sh y; layer mouse
+    u:          multi exec /home/danil/.config/mouseless/save-mark.sh u; layer mouse
+    i:          multi exec /home/danil/.config/mouseless/save-mark.sh i; layer mouse
+    o:          multi exec /home/danil/.config/mouseless/save-mark.sh o; layer mouse
+    p:          multi exec /home/danil/.config/mouseless/save-mark.sh p; layer mouse
+    leftbrace:  multi exec /home/danil/.config/mouseless/save-mark.sh leftbrace; layer mouse
+    rightbrace: multi exec /home/danil/.config/mouseless/save-mark.sh rightbrace; layer mouse
+    a:          multi exec /home/danil/.config/mouseless/save-mark.sh a; layer mouse
+    s:          multi exec /home/danil/.config/mouseless/save-mark.sh s; layer mouse
+    d:          multi exec /home/danil/.config/mouseless/save-mark.sh d; layer mouse
+    f:          multi exec /home/danil/.config/mouseless/save-mark.sh f; layer mouse
+    g:          multi exec /home/danil/.config/mouseless/save-mark.sh g; layer mouse
+    h:          multi exec /home/danil/.config/mouseless/save-mark.sh h; layer mouse
+    j:          multi exec /home/danil/.config/mouseless/save-mark.sh j; layer mouse
+    k:          multi exec /home/danil/.config/mouseless/save-mark.sh k; layer mouse
+    l:          multi exec /home/danil/.config/mouseless/save-mark.sh l; layer mouse
+    semicolon:  multi exec /home/danil/.config/mouseless/save-mark.sh semicolon; layer mouse
+    apostrophe: multi exec /home/danil/.config/mouseless/save-mark.sh apostrophe; layer mouse
+    backslash:  multi exec /home/danil/.config/mouseless/save-mark.sh backslash; layer mouse
+    z:          multi exec /home/danil/.config/mouseless/save-mark.sh z; layer mouse; layer mouse
+    x:          multi exec /home/danil/.config/mouseless/save-mark.sh x; layer mouse; layer mouse
+    c:          multi exec /home/danil/.config/mouseless/save-mark.sh c; layer mouse; layer mouse
+    v:          multi exec /home/danil/.config/mouseless/save-mark.sh v; layer mouse; layer mouse
+    b:          multi exec /home/danil/.config/mouseless/save-mark.sh b; layer mouse; layer mouse
+    n:          multi exec /home/danil/.config/mouseless/save-mark.sh n; layer mouse; layer mouse
+    m:          multi exec /home/danil/.config/mouseless/save-mark.sh m; layer mouse; layer mouse
+    comma:      multi exec /home/danil/.config/mouseless/save-mark.sh comma; layer mouse
+    dot:        multi exec /home/danil/.config/mouseless/save-mark.sh dot; layer mouse
+    slash:      multi exec /home/danil/.config/mouseless/save-mark.sh slash; layer mouse
+    k1:         multi exec /home/danil/.config/mouseless/save-mark.sh k1; layer mouse
+    k2:         multi exec /home/danil/.config/mouseless/save-mark.sh k2; layer mouse
+    k3:         multi exec /home/danil/.config/mouseless/save-mark.sh k3; layer mouse
+    k4:         multi exec /home/danil/.config/mouseless/save-mark.sh k4; layer mouse
+    k5:         multi exec /home/danil/.config/mouseless/save-mark.sh k5; layer mouse
+    k6:         multi exec /home/danil/.config/mouseless/save-mark.sh k6; layer mouse
+    k7:         multi exec /home/danil/.config/mouseless/save-mark.sh k7; layer mouse
+    k8:         multi exec /home/danil/.config/mouseless/save-mark.sh k8; layer mouse
+    k9:         multi exec /home/danil/.config/mouseless/save-mark.sh k9; layer mouse
+    k0:         multi exec /home/danil/.config/mouseless/save-mark.sh k0; layer mouse
+
+    leftshift: toggle-layer shift-save-mark
+    rightshift: toggle-layer shift-save-mark
+
+- name: shift-save-mark
+  bindings:
+    q:          multi exec /home/danil/.config/mouseless/save-mark.sh Q; layer mouse
+    w:          multi exec /home/danil/.config/mouseless/save-mark.sh W; layer mouse
+    e:          multi exec /home/danil/.config/mouseless/save-mark.sh E; layer mouse
+    r:          multi exec /home/danil/.config/mouseless/save-mark.sh R; layer mouse
+    t:          multi exec /home/danil/.config/mouseless/save-mark.sh T; layer mouse
+    y:          multi exec /home/danil/.config/mouseless/save-mark.sh Y; layer mouse
+    u:          multi exec /home/danil/.config/mouseless/save-mark.sh U; layer mouse
+    i:          multi exec /home/danil/.config/mouseless/save-mark.sh I; layer mouse
+    o:          multi exec /home/danil/.config/mouseless/save-mark.sh O; layer mouse
+    p:          multi exec /home/danil/.config/mouseless/save-mark.sh P; layer mouse
+    leftbrace:  multi exec /home/danil/.config/mouseless/save-mark.sh leftcurlybrace; layer mouse
+    rightbrace: multi exec /home/danil/.config/mouseless/save-mark.sh rightcurlybrace; layer mouse
+    a:          multi exec /home/danil/.config/mouseless/save-mark.sh A; layer mouse
+    s:          multi exec /home/danil/.config/mouseless/save-mark.sh S; layer mouse
+    d:          multi exec /home/danil/.config/mouseless/save-mark.sh D; layer mouse
+    f:          multi exec /home/danil/.config/mouseless/save-mark.sh F; layer mouse
+    g:          multi exec /home/danil/.config/mouseless/save-mark.sh G; layer mouse
+    h:          multi exec /home/danil/.config/mouseless/save-mark.sh H; layer mouse
+    j:          multi exec /home/danil/.config/mouseless/save-mark.sh J; layer mouse
+    k:          multi exec /home/danil/.config/mouseless/save-mark.sh K; layer mouse
+    l:          multi exec /home/danil/.config/mouseless/save-mark.sh L; layer mouse
+    semicolon:  multi exec /home/danil/.config/mouseless/save-mark.sh colon; layer mouse
+    apostrophe: multi exec /home/danil/.config/mouseless/save-mark.sh doublequotes; layer mouse
+    backslash:  multi exec /home/danil/.config/mouseless/save-mark.sh pipe; layer mouse
+    z:          multi exec /home/danil/.config/mouseless/save-mark.sh Z; layer mouse; layer mouse
+    x:          multi exec /home/danil/.config/mouseless/save-mark.sh X; layer mouse; layer mouse
+    c:          multi exec /home/danil/.config/mouseless/save-mark.sh C; layer mouse; layer mouse
+    v:          multi exec /home/danil/.config/mouseless/save-mark.sh V; layer mouse; layer mouse
+    b:          multi exec /home/danil/.config/mouseless/save-mark.sh B; layer mouse; layer mouse
+    n:          multi exec /home/danil/.config/mouseless/save-mark.sh N; layer mouse; layer mouse
+    m:          multi exec /home/danil/.config/mouseless/save-mark.sh M; layer mouse; layer mouse
+    comma:      multi exec /home/danil/.config/mouseless/save-mark.sh lessthan; layer mouse
+    dot:        multi exec /home/danil/.config/mouseless/save-mark.sh greaterthan; layer mouse
+    slash:      multi exec /home/danil/.config/mouseless/save-mark.sh questionmark; layer mouse
+    k1:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k1; layer mouse
+    k2:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k2; layer mouse
+    k3:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k3; layer mouse
+    k4:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k4; layer mouse
+    k5:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k5; layer mouse
+    k6:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k6; layer mouse
+    k7:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k7; layer mouse
+    k8:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k8; layer mouse
+    k9:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k9; layer mouse
+    k0:         multi exec /home/danil/.config/mouseless/save-mark.sh shift-k0; layer mouse
+
+#---
+
+- name: goto-mark
+  passThrough: false
+  bindings:
+    q:          multi exec /home/danil/.config/mouseless/goto-mark.sh q; layer mouse
+    w:          multi exec /home/danil/.config/mouseless/goto-mark.sh w; layer mouse
+    e:          multi exec /home/danil/.config/mouseless/goto-mark.sh e; layer mouse
+    r:          multi exec /home/danil/.config/mouseless/goto-mark.sh r; layer mouse
+    t:          multi exec /home/danil/.config/mouseless/goto-mark.sh t; layer mouse
+    y:          multi exec /home/danil/.config/mouseless/goto-mark.sh y; layer mouse
+    u:          multi exec /home/danil/.config/mouseless/goto-mark.sh u; layer mouse
+    i:          multi exec /home/danil/.config/mouseless/goto-mark.sh i; layer mouse
+    o:          multi exec /home/danil/.config/mouseless/goto-mark.sh o; layer mouse
+    p:          multi exec /home/danil/.config/mouseless/goto-mark.sh p; layer mouse
+    leftbrace:  multi exec /home/danil/.config/mouseless/goto-mark.sh leftbrace; layer mouse
+    rightbrace: multi exec /home/danil/.config/mouseless/goto-mark.sh rightbrace; layer mouse
+    a:          multi exec /home/danil/.config/mouseless/goto-mark.sh a; layer mouse
+    s:          multi exec /home/danil/.config/mouseless/goto-mark.sh s; layer mouse
+    d:          multi exec /home/danil/.config/mouseless/goto-mark.sh d; layer mouse
+    f:          multi exec /home/danil/.config/mouseless/goto-mark.sh f; layer mouse
+    g:          multi exec /home/danil/.config/mouseless/goto-mark.sh g; layer mouse
+    h:          multi exec /home/danil/.config/mouseless/goto-mark.sh h; layer mouse
+    j:          multi exec /home/danil/.config/mouseless/goto-mark.sh j; layer mouse
+    k:          multi exec /home/danil/.config/mouseless/goto-mark.sh k; layer mouse
+    l:          multi exec /home/danil/.config/mouseless/goto-mark.sh l; layer mouse
+    semicolon:  multi exec /home/danil/.config/mouseless/goto-mark.sh semicolon; layer mouse
+    apostrophe: multi exec /home/danil/.config/mouseless/goto-mark.sh apostrophe; layer mouse
+    backslash:  multi exec /home/danil/.config/mouseless/goto-mark.sh backslash; layer mouse
+    z:          multi exec /home/danil/.config/mouseless/goto-mark.sh z; layer mouse; layer mouse
+    x:          multi exec /home/danil/.config/mouseless/goto-mark.sh x; layer mouse; layer mouse
+    c:          multi exec /home/danil/.config/mouseless/goto-mark.sh c; layer mouse; layer mouse
+    v:          multi exec /home/danil/.config/mouseless/goto-mark.sh v; layer mouse; layer mouse
+    b:          multi exec /home/danil/.config/mouseless/goto-mark.sh b; layer mouse; layer mouse
+    n:          multi exec /home/danil/.config/mouseless/goto-mark.sh n; layer mouse; layer mouse
+    m:          multi exec /home/danil/.config/mouseless/goto-mark.sh m; layer mouse; layer mouse
+    comma:      multi exec /home/danil/.config/mouseless/goto-mark.sh comma; layer mouse
+    dot:        multi exec /home/danil/.config/mouseless/goto-mark.sh dot; layer mouse
+    slash:      multi exec /home/danil/.config/mouseless/goto-mark.sh slash; layer mouse
+    k1:         multi exec /home/danil/.config/mouseless/goto-mark.sh k1; layer mouse
+    k2:         multi exec /home/danil/.config/mouseless/goto-mark.sh k2; layer mouse
+    k3:         multi exec /home/danil/.config/mouseless/goto-mark.sh k3; layer mouse
+    k4:         multi exec /home/danil/.config/mouseless/goto-mark.sh k4; layer mouse
+    k5:         multi exec /home/danil/.config/mouseless/goto-mark.sh k5; layer mouse
+    k6:         multi exec /home/danil/.config/mouseless/goto-mark.sh k6; layer mouse
+    k7:         multi exec /home/danil/.config/mouseless/goto-mark.sh k7; layer mouse
+    k8:         multi exec /home/danil/.config/mouseless/goto-mark.sh k8; layer mouse
+    k9:         multi exec /home/danil/.config/mouseless/goto-mark.sh k9; layer mouse
+    k0:         multi exec /home/danil/.config/mouseless/goto-mark.sh k0; layer mouse
+
+    leftshift: toggle-layer shift-goto-mark
+    rightshift: toggle-layer shift-goto-mark
+
+- name: shift-goto-mark
+  passThrough: false
+  bindings:
+    q:          multi exec /home/danil/.config/mouseless/goto-mark.sh Q; layer mouse
+    w:          multi exec /home/danil/.config/mouseless/goto-mark.sh W; layer mouse
+    e:          multi exec /home/danil/.config/mouseless/goto-mark.sh E; layer mouse
+    r:          multi exec /home/danil/.config/mouseless/goto-mark.sh R; layer mouse
+    t:          multi exec /home/danil/.config/mouseless/goto-mark.sh T; layer mouse
+    y:          multi exec /home/danil/.config/mouseless/goto-mark.sh Y; layer mouse
+    u:          multi exec /home/danil/.config/mouseless/goto-mark.sh U; layer mouse
+    i:          multi exec /home/danil/.config/mouseless/goto-mark.sh I; layer mouse
+    o:          multi exec /home/danil/.config/mouseless/goto-mark.sh O; layer mouse
+    p:          multi exec /home/danil/.config/mouseless/goto-mark.sh P; layer mouse
+    leftbrace:  multi exec /home/danil/.config/mouseless/goto-mark.sh leftcurlybrace; layer mouse
+    rightbrace: multi exec /home/danil/.config/mouseless/goto-mark.sh rightcurlybrace; layer mouse
+    a:          multi exec /home/danil/.config/mouseless/goto-mark.sh A; layer mouse
+    s:          multi exec /home/danil/.config/mouseless/goto-mark.sh S; layer mouse
+    d:          multi exec /home/danil/.config/mouseless/goto-mark.sh D; layer mouse
+    f:          multi exec /home/danil/.config/mouseless/goto-mark.sh F; layer mouse
+    g:          multi exec /home/danil/.config/mouseless/goto-mark.sh G; layer mouse
+    h:          multi exec /home/danil/.config/mouseless/goto-mark.sh H; layer mouse
+    j:          multi exec /home/danil/.config/mouseless/goto-mark.sh J; layer mouse
+    k:          multi exec /home/danil/.config/mouseless/goto-mark.sh K; layer mouse
+    l:          multi exec /home/danil/.config/mouseless/goto-mark.sh L; layer mouse
+    semicolon:  multi exec /home/danil/.config/mouseless/goto-mark.sh colon; layer mouse
+    apostrophe: multi exec /home/danil/.config/mouseless/goto-mark.sh doublequotes; layer mouse
+    backslash:  multi exec /home/danil/.config/mouseless/goto-mark.sh pipe; layer mouse
+    z:          multi exec /home/danil/.config/mouseless/goto-mark.sh Z; layer mouse; layer mouse
+    x:          multi exec /home/danil/.config/mouseless/goto-mark.sh X; layer mouse; layer mouse
+    c:          multi exec /home/danil/.config/mouseless/goto-mark.sh C; layer mouse; layer mouse
+    v:          multi exec /home/danil/.config/mouseless/goto-mark.sh V; layer mouse; layer mouse
+    b:          multi exec /home/danil/.config/mouseless/goto-mark.sh B; layer mouse; layer mouse
+    n:          multi exec /home/danil/.config/mouseless/goto-mark.sh N; layer mouse; layer mouse
+    m:          multi exec /home/danil/.config/mouseless/goto-mark.sh M; layer mouse; layer mouse
+    comma:      multi exec /home/danil/.config/mouseless/goto-mark.sh lessthan; layer mouse
+    dot:        multi exec /home/danil/.config/mouseless/goto-mark.sh greaterthan; layer mouse
+    slash:      multi exec /home/danil/.config/mouseless/goto-mark.sh questionmark; layer mouse
+    k1:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k1; layer mouse
+    k2:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k2; layer mouse
+    k3:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k3; layer mouse
+    k4:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k4; layer mouse
+    k5:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k5; layer mouse
+    k6:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k6; layer mouse
+    k7:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k7; layer mouse
+    k8:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k8; layer mouse
+    k9:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k9; layer mouse
+    k0:         multi exec /home/danil/.config/mouseless/goto-mark.sh shift-k0; layer mouse
