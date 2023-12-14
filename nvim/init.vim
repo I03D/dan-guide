@@ -12,6 +12,7 @@ vnoremap i k
 vnoremap n h
 vnoremap o l
 nnoremap O e
+nnoremap N b
 vnoremap N b
 nnoremap E 5j
 vnoremap E 5j
