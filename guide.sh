@@ -163,7 +163,7 @@ case "$it" in
 
 	echo "sudo pacman -S lf"
 	echo "mkdir ~/.config/i3 -p"
-	echo "mv DanOS/i3/* .config/i3"
+	echo "mv DanOS/i3/* ~/.config/i3"
 
 	read
 	clear
