@@ -229,8 +229,9 @@ case "$it" in
 
 	echo "Устанавливаем mouseless:"
 	echo "git clone https://github.com/jbensmann/mouseless.git"
-	echo "sudo mv ~/DanOS/mouseless/ ~/.config/mouseless"
+	
 	echo "mkdir ~/.config/mouseless/"
+ 	echo "mv ~/DanOS/mouseless/config.yaml ~/.config/mouseless/
 	echo "sudo mv ~/DanOS/mouseless/mouseless /bin/mouseless"
 	echo "sudo chmod 777 /usr/bin/mouseless"
 	
