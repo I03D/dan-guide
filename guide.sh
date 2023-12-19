@@ -178,7 +178,7 @@ case "$it" in
 	clear
 
 	echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
-	echo "mv DanOS/dynamic-colors/ .config/dynamic-colors/"
+	echo "mv DanOS/dynamic-colors/ ~/.config/dynamic-colors/"
 	echo "cp .config/dynamic-colors/colorschemes/LightScheme .Xresources"
 	echo "git clone https://github.com/hellricer/dynamic-colors.git"
 	echo "mv dynamic-colors/ .dynamic-colors/"
