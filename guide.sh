@@ -181,7 +181,7 @@ case "$it" in
 	echo "mv DanOS/dynamic-colors/ ~/.config/dynamic-colors/"
 	echo "cp ~/.config/dynamic-colors/colorschemes/LightScheme ~/.Xresources"
 	echo "git clone https://github.com/hellricer/dynamic-colors.git"
-	echo "mv dynamic-colors/ .dynamic-colors/"
+	echo "mv ~/dynamic-colors/ ~/.dynamic-colors/"
 	echo "sudo chmod 777 .config/i3/DarkTheme.sh"
 	echo "sudo chmod 777 .config/i3/LightTheme.sh"
 	echo ""
