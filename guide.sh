@@ -179,7 +179,7 @@ case "$it" in
 
 	echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
 	echo "mv DanOS/dynamic-colors/ ~/.config/dynamic-colors/"
-	echo "cp .config/dynamic-colors/colorschemes/LightScheme .Xresources"
+	echo "cp ~/.config/dynamic-colors/colorschemes/LightScheme ~/.Xresources"
 	echo "git clone https://github.com/hellricer/dynamic-colors.git"
 	echo "mv dynamic-colors/ .dynamic-colors/"
 	echo "sudo chmod 777 .config/i3/DarkTheme.sh"
