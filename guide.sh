@@ -219,8 +219,8 @@ case "$it" in
 	clear
 
 	echo "git clone https://github.com/i03d/Browstarter.git"
-	echo "cp Browstarter/Browstarter.py ~/.config/i3/"
-	echo "sudo chmod 777 .config/i3/Browstarter.py"
+	echo "cp ~/Browstarter/Browstarter.py ~/.config/i3/"
+	echo "sudo chmod 777 ~/.config/i3/Browstarter.py"
 	echo "Требуется для BrowStarter:"
 	echo "sudo pacman -S python"
 	
@@ -229,9 +229,9 @@ case "$it" in
 
 	echo "Устанавливаем mouseless:"
 	echo "git clone https://github.com/jbensmann/mouseless.git"
-	echo "sudo mv DanOS/mouseless/ ~/.config/mouseless"
+	echo "sudo mv ~/DanOS/mouseless/ ~/.config/mouseless"
 	echo "mkdir ~/.config/mouseless/"
-	echo "mv DanOS/mouseless/config.yaml ~/.config/mouseless/config.yaml"
+	echo "mv ~/DanOS/mouseless/config.yaml ~/.config/mouseless/config.yaml"
 	echo "sudo mv DanOS/mouseless/mouseless /bin/mouseless"
 	echo "sudo chmod 777 /usr/bin/mouseless"
 	
