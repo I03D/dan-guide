@@ -161,7 +161,6 @@ case "$it" in
 	read
 	clear
 
-	echo "sudo pacman -S git"
 	echo "git clone https://github.com/i03d/DanOS.git"
 	echo "sudo pacman -S lf"
 	echo "mkdir ~/.config/i3 -p"
