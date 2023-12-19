@@ -77,11 +77,13 @@ case "$it" in
 	read
 	clear
 
-	echo "nvim /etc/hosts/"
+	echo "nvim /etc/hosts"
 	echo "Оставить существующие строки, добавить:"
+ 	echo "----------------------------------------"
 	echo "127.0.0.1 localhost"
 	echo "::1		localhost"
 	echo "127.0.1.1	archpc.localdomain	archpc"
+ 	echo "----------------------------------------"
 	
 	read
 	clear
@@ -126,6 +128,12 @@ case "$it" in
 	echo "grub-mkconfig -o /boot/grub/grub.cfg"
 	
 	read
+	clear
+
+	echo "pacman -S git tmux"
+ 	git clone https://github.com/i03d/DanOS
+
+ 	read
 	clear
 
 	echo "Теперь ОС может нормально запускаться. Загрузить её."
