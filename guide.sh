@@ -292,6 +292,7 @@ case "$it" in
 
 	echo "Установка соответствующих настроек NeoVim и lf, если вы уже способны использовать Colemak-раскладку:"
 	echo "sudo cp DanOS/nvim/ .config/nvim -r"
+ 	echo "sudo mkdir /root/.config/nvim/"
 	echo "sudo cp DanOS/nvim /root/.config/nvim -r"
 	echo ""
 	echo "sudo cp DanOS/lf .config/lf/ -r"
