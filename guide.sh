@@ -172,7 +172,7 @@ case "$it" in
 	echo "sudo pacman -S feh"
 	echo "sudo chmod 777 ~/.config/i3/i3-background.png"
 	echo "sudo pacman -S i3lock"
-	echo "sudo chmod 777 ~/.config/i3/i3lock-background"
+	echo "sudo chmod 777 ~/.config/i3/i3lock-background.png"
 
 	read
 	clear
