@@ -5,7 +5,6 @@ center() {
   padding="$(printf '%0.1s' \ {1..500})"
   printf '%*.*s %s %*.*s\n' 0 "$(((termwidth-2-${#1})/2))" "$padding" "$1" 0 "$(((termwidth-1-${#1})/2))" "$padding"
 }
-center "Something I want to print"
 
 clear
 
@@ -265,6 +264,18 @@ case "$it" in
 	clear
 
 	echo "Устанавливаем автоматический запуск при старте системы:"
+ 	echo ""
+ 	echo "-------------------------------------------------------"
+  	echo "[Unit]"
+   	echo "Description=mouseless"
+    	echo ""
+     	echo "[Service]
+      	echo "ExecStart=/bin/mouseless --config /home/danil/.config/mouseless/config.yaml"
+       	echo ""
+	echo "[Install]"
+ 	echo "WantedBy=multi-user.target"
+   	echo "-------------------------------------------------------"
+    	echo ""
 	echo "sudo nvim /etc/systemd/system/mouseless.service"
 	echo "sudo systemctl enable mouseless.service"
 	echo "sudo systemctl start mouseless.service"
