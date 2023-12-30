@@ -1,5 +1,7 @@
 #!/bin/bash
 
+tmux new-session -d
+
 tmux set -g status-style bg=red,fg=black
 tmux set -g pane-border-style bg=yellow,fg=yellow
 tmux set -g pane-active-border-style bg=yellow,fg=yellow
@@ -13,7 +15,6 @@ tmux bind -n C-f select-pane -t:.+
 tmux bind -n C-k send-keys -X scroll-down
 tmux bind -n C-l send-keys -X scroll-up
 
-tmux new-session -d
 tmux rename-window 'Dan-Guide'
 
 tmux split-window -h
