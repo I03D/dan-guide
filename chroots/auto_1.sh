@@ -1,5 +1,6 @@
 
-echo "1. Настроить регион: (подобрать свой): ln -sf /usr/share/zoneinfo/Europe/Moscow"
+echo "Настроить chasovoy poyas (подобрать свой): ln -sf /usr/share/zoneinfo/Europe/Moscow /mnt/"
+read
 
 hwclock --systohc
 
@@ -45,7 +46,9 @@ echo "nvim /etc/default/grub"
 echo echo "Откомментировать строку \"grub_disable_os_prober=\"true\"\""
 echo "------------------------------------------------------------"
 echo ""
-echo "Vipolnit' grub-install /dev/sdX"
+echo "arch-chroot /mnt"
+echo "grub-install /dev/sdX"
+echo "X - bukva ustroystva."
 read
 grub-mkconfig -o /boot/grub/grub.cfg
 

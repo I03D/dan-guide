@@ -21,16 +21,16 @@ read
 clear
 
 echo "Создать файловые системы:"
-echo "Для разделов fat32: mkfs.fat -F32 /dev/sdXn"
-echo "Для разделов ext4: mkfs.ext4 /dev/sdXn"
-echo "Xn - bukva ustroystva i cifra razdela, esli est."
+echo "Для разделов fat32: mkfs.fat -F32 /dev/sdXN"
+echo "Для разделов ext4: mkfs.ext4 /dev/sdXN"
+echo "X - bukva ustroystva; N - cifra razdela, esli est."
 
 read
 clear
 
 echo "Примонтируйте раздел с корневым каталогом к /mnt:"
-echo "mount /dev/sdaN /mnt"
-echo "N - cifra razdela, esli est."
+echo "mount /dev/sdXN /mnt"
+echo "X - bukva ustroystva; N - cifra razdela, esli est."
 
 read
 clear
