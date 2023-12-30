@@ -21,7 +21,10 @@ echo 127.0.0.1	$hostname.localdomain	$hostname >> /etc/hosts
 
 echo "Устанавливаем пароли, добавляем пользователей:"
 passwd
-useradd -m user
+
+echo "Vvedite imya polzovatelya s pravami sudo:"
+read -e username
+useradd -m $username
 usermod -aG wheel,audio,video,storage user
 
 pacman -S sudo --noconfirm
@@ -50,3 +53,4 @@ echo "Теперь ОС может нормально запускаться. З
 echo "Если сначала запустится установщик ArchLinux - выбрать \"Boot existing OS\"."
 read
 exit
+
