@@ -19,7 +19,7 @@ tmux rename-window 'Dan-Guide'
 
 tmux split-window -h
 
-tmux send-keys 'clear; echo Dlya prokrutki ispolzuyte ctrl+B, zatem - pgUp/pgDown. Chtobi zakrit etu podskazku, nazhmite ctrl+b, X. Dlya pereklyuchenia mezhdu panelyami ispolzuyte ctrl+j.' Enter
+tmux send-keys 'clear; echo Dlya prokrutki ispolzuyte ctrl+B, zatem - pgUp i pgDown. Chtobi zakrit etu podskazku, nazhmite ctrl+b, X. Dlya pereklyuchenia mezhdu panelyami ispolzuyte ctrl+j.' Enter
 
 tmux split-window -v
 
