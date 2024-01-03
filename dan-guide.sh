@@ -21,7 +21,7 @@ tmux rename-window 'Dan-Guide'
 
 tmux split-window -h
 
-tmux send-keys 'clear; echo Dlya prokrutki ispolzuyte ctrl+B, zatem - pgUp i pgDown. Chtobi zakrit etu podskazku, nazhmite ctrl+b, X. Dlya pereklyuchenia mezhdu panelyami ispolzuyte ctrl+j.' Enter
+tmux send-keys 'clear; echo Для прокрутки используйте ctrl+B, затем - pgUp и pgDown. Чтобы закрыть эту подсказку, нажмите ctrl+b, X. Для переключения между панелями используйте ctrl+j.' Enter
 
 tmux split-window -v
 
