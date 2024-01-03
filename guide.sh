@@ -9,7 +9,7 @@ center() {
 clear
 
 center "~ Dan-Guide ~"
-echo Вы запустили неофициальный гид по установке ArchLinux. Для продолжения nazhmite Enter, kogda zakroete verhnyuu podskazku.
+echo Вы запустили неофициальный гид по установке ArchLinux. Для продолжения нажмите Enter, когда закроете верхнюю подсказку.
 
 read
 clear
@@ -23,14 +23,14 @@ clear
 echo "Создать файловые системы:"
 echo "Для разделов fat32: mkfs.fat -F32 /dev/sdXN"
 echo "Для разделов ext4: mkfs.ext4 /dev/sdXN"
-echo "X - bukva ustroystva; N - cifra razdela, esli est."
+echo "X - буква устройства; N - цифра раздела, если есть."
 
 read
 clear
 
 echo "Примонтируйте раздел с корневым каталогом к /mnt:"
 echo "mount /dev/sdXN /mnt"
-echo "X - bukva ustroystva; N - cifra razdela, esli est."
+echo "X - буква устройства; N - цифра раздела, если есть."
 
 read
 clear
@@ -44,23 +44,23 @@ clear
 
 case "$it" in
 "1" )
-	echo "Ustanavlivaem paketi base, linux, linux-firmware i sudo..."
+	echo "Устанавливаем пакеты base, linux, linux-firmware и sudo..."
 	pacstrap --noconfirm /mnt base linux linux-firmware sudo
 
 	echo ""
 
-	echo "Generacia fstab..."
+	echo "Генерация fstab..."
 	genfstab -U /mnt >> /mnt/etc/fstab
 
 	echo ""
 
-	echo "Sozdanie /mnt/opt/scripts/..."
+	echo "Создание /mnt/opt/scripts/..."
 
 	mkdir -p /mnt/opt/scripts/
 	
 	echo ""
 
-	echo "Kopirovanie sleduyuschih chastey skripta..."
+	echo "Копирование следующих частей скрипта..."
 	cp -r ./chroots/* /mnt/opt/scripts/
 	arch-chroot /mnt sudo sh /opt/scripts/auto_1.sh
 
@@ -68,16 +68,16 @@ case "$it" in
 
 	echo "Теперь ОС может нормально запускаться. Загрузить её."
 	# echo "Если сначала запустится установщик ArchLinux - выбрать \"Boot existing OS\"."
-	echo "Samiy prostoy variant - izvlech nositel' ArchLinux. Takzhe mozhno pri zapuske ustanovschika ispolzovat \"Boot existing OS\"."
-	echo "Najmite Enter dlya perezagruzki."
+	echo "Самый простой вариант - извлечь носитель ArchLinux. Также можно при запуске установщика использовать \"Boot existing OS\"."
+	echo "Нажмите Enter для перезагрузки."
 
 	read
 
 	echo ""
 
-	echo "Razmontirovanie /mnt/..."
+	echo "Размонтирование /mnt/..."
 	# umount /mnt -l
-	echo "Vipolnenie perezagruzki..."
+	echo "Выполнение перезагрузки..."
 	# reboot
 	exit
 
@@ -324,9 +324,3 @@ case "$it" in
 	echo "test*"
 	;;
 esac
-
-
-
-
-
-
