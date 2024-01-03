@@ -56,7 +56,7 @@ usermod -aG wheel,audio,video,storage user
 echo ""
 
 echo "Ustanovka sudo..."
-pacman -S sudo --noconfirm
+pacman -S --noconfirm sudo
 
 echo ""
 
@@ -67,13 +67,13 @@ echo "2. Откомментировать строку \"%wheel all=(all:all) al
 echo ""
 
 echo "Ustanovka NetworkManager..."
-pacman -S networkmanager --noconfirm
+pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
 
 echo ""
 
 echo "Установка загрузчика:"
-pacman -S grub --noconfirm
+pacman -S --noconfirm grub
 echo ""
 echo "------------------------------------------------------------"
 echo "Если присутствуют другие ОС, которые grub должен распознать:"

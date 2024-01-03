@@ -44,8 +44,8 @@ clear
 
 case "$it" in
 "1" )
-	echo "Ustanavlivaem paketi base, linux i linux-firmware..."
-	pacstrap /mnt base linux linux-firmware --noconfirm
+	echo "Ustanavlivaem paketi base, linux, linux-firmware i sudo..."
+	pacstrap --noconfirm /mnt base linux linux-firmware sudo
 
 	echo ""
 
