@@ -54,8 +54,15 @@ case "$it" in
 
 	echo ""
 
-	cp ./chroots/ /mnt/ -r
-	arch-chroot /mnt sudo sh /chroots/auto_1.sh
+	echo "Sozdanie /mnt/opt/scripts/..."
+
+	mkdir /mnt/opt/scripts/
+	
+	echo ""
+
+	echo "Kopirovanie sleduyuschih chastey skripta..."
+	cp ./chroots/* /mnt/opt/scripts/ -r
+	arch-chroot /mnt sudo sh /opt/scripts/auto_1.sh
 
 	echo ""
 
@@ -66,8 +73,8 @@ case "$it" in
 
 	read
 
-	echo "Kopiruem sleduyuschuyu chast' skripta..."
-	cp ./DanOS/chroots/reboot_1.sh /mnt/
+	echo ""
+
 	echo "Razmontirovanie /mnt/..."
 	# umount /mnt -l
 	echo "Vipolnenie perezagruzki..."
