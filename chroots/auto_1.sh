@@ -89,3 +89,5 @@ echo "X - bukva ustroystva."
 read
 grub-mkconfig -o /boot/grub/grub.cfg
 
+echo "Запись следующего скрипта в .bashrc для автозапуска..."
+echo "sh /opt/script/reboot_1.sh" >> /home/$username/.bashrc
