@@ -56,12 +56,12 @@ case "$it" in
 
 	echo "Sozdanie /mnt/opt/scripts/..."
 
-	mkdir /mnt/opt/scripts/
+	mkdir -p /mnt/opt/scripts/
 	
 	echo ""
 
 	echo "Kopirovanie sleduyuschih chastey skripta..."
-	cp ./chroots/* /mnt/opt/scripts/ -r
+	cp -r ./chroots/* /mnt/opt/scripts/
 	arch-chroot /mnt sudo sh /opt/scripts/auto_1.sh
 
 	echo ""
