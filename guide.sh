@@ -44,120 +44,35 @@ clear
 
 case "$it" in
 "1" )
+	echo "Ustanavlivaem paketi base, linux i linux-firmware..."
 	pacstrap /mnt base linux linux-firmware --noconfirm
+
+	echo ""
+
+	echo "Generacia fstab..."
 	genfstab -U /mnt >> /mnt/etc/fstab
+
+	echo ""
 
 	cp ./chroots/ /mnt/ -r
 	arch-chroot /mnt sudo sh /chroots/auto_1.sh
 
-	# arch-chroot /mnt sudo sh /chroots/auto_2.sh
-	
-	echo "umount /mnt -l"
-	echo "reboot"
-
-	echo "sudo pacman -S mesa"
-	echo "sudo pacman -S xorg"
 	echo ""
-	echo "sudo pacman -S lightdm lightdm-gtk-greeter"
-	echo "sudo systemctl enable lightdm.service"
 
-	echo "sudo pacman -S i3"
-	echo "sudo pacman -S xterm"
-	echo "sudo pacman -S pulseaudio"
+	echo "Теперь ОС может нормально запускаться. Загрузить её."
+	# echo "Если сначала запустится установщик ArchLinux - выбрать \"Boot existing OS\"."
+	echo "Samiy prostoy variant - izvlech nositel' ArchLinux. Takzhe mozhno pri zapuske ustanovschika ispolzovat \"Boot existing OS\"."
+	echo "Najmite Enter dlya perezagruzki."
 
-	echo "sudo pacman -S git"
-	echo "git clone https://github.com/i03d/DanOS.git"
-	echo "sudo pacman -S lf"
-	echo "mkdir ~/.config/i3 -p"
-	echo "mv DanOS/i3/* .config/i3"
+	read
 
-	echo "Требуется для изображения рабочего стола:"
-	echo "sudo pacman -S feh"
-	echo "sudo chmod 777 ~/.config/i3/i3-background.png"
-	echo "sudo pacman -S i3lock"
-	echo "sudo chmod 777 ~/.config/i3/i3lock-background"
-
-	echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
-	echo "mv DanOS/dynamic-colors/ .config/dynamic-colors/"
-	echo "cp .config/dynamic-colors/colorschemes/LightScheme .Xresources"
-	echo "git clone https://github.com/hellricer/dynamic-colors.git"
-	echo "mv dynamic-colors/ .dynamic-colors/"
-	echo "sudo chmod 777 .config/i3/DarkTheme.sh"
-	echo "sudo chmod 777 .config/i3/LightTheme.sh"
-	echo ""
-	echo "Требуется для dynamic-colors:"
-	echo "sudo pacman -S gcc"
-
-	echo "Устанавливаем xkb-switch:"
-	echo "git clone https://aur.archlinux.org/xkb-switch.git"
-	echo "cd xkb-switch"
-	echo "sudo pacman -S base-devel"
-	echo "makepkg -si"
-	echo "cd ~/"
-	echo "sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch"
-	echo "Создать файл конфигурации для клавиатуры X11:"
-	echo "sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf"
-	echo ""
-	echo "-----------------------------------------------"
-	echo "Section \"InputClass\""
-		echo "Identifier \"system-keyboard\""
-		echo "MatchIsKeyboard \"on\""
-		echo "Option \"XkbLayout\" \"us,ru,us\""
-		echo "Option \"XkbModel\" \"pc104\""
-		echo "Option \"XkbVariant\" \",,colemak_dh\""
-		echo "Option \"XkbOptions\" \"\""
-	echo "EndSection"
-	echo "-----------------------------------------------"
-
-	echo "git clone https://github.com/i03d/Browstarter.git"
-	echo "cp Browstarter/Browstarter.py ~/.config/i3/"
-	echo "sudo chmod 777 .config/i3/Browstarter.py"
-	echo "Требуется для BrowStarter:"
-	echo "sudo pacman -S python"
-
-	echo "Устанавливаем mouseless:"
-	echo "git clone https://github.com/jbensmann/mouseless.git"
-	echo "sudo mv DanOS/mouseless/ ~/.config/mouseless"
-	echo "mkdir ~/.config/mouseless/"
-	echo "mv DanOS/mouseless/config.yaml ~/.config/mouseless/config.yaml"
-	echo "sudo mv DanOS/mouseless/mouseless /bin/mouseless"
-	echo "sudo chmod 777 /usr/bin/mouseless"
-
-	echo "Требуется xdotool; разрешить пользователям читать ввод с клавиатурного файла:"
-	echo "sudo pacman -S xdotool"
-	echo ""
-	echo "sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF"
-	echo "KERNEL==\"uinput\", GROUP=\"$USER\", MODE:=\"0660\""
-	echo "KERNEL==\"event*\", GROUP=\"$USER\", NAME=\"input/%k\", MODE=\"660\""
-	echo "EOF"
-
-	echo echo "(Отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
-	echo "Тестируем:"
-	echo "reboot"
-	echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
-	echo ""
-	echo "sudo mouseless --config ~/.config/mouseless/config.yaml"
-	echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
-	echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
-	echo "reboot"
-	echo "Тестируем:"
-	echo "sudo mouseless --config ~/.config/mouseless/config.yaml"
-
-	echo "Устанавливаем автоматический запуск при старте системы:"
-	echo "sudo nvim /etc/systemd/system/mouseless.service"
-	echo "sudo systemctl enable mouseless.service"
-	echo "sudo systemctl start mouseless.service"
-
-	echo "Проверка:"
-	echo "sudo systemctl status mouseless.service"
-	echo "Должна быть пометка \"Active: active (running)\"."
-
-	echo "Установка соответствующих настроек NeoVim и lf, если вы уже способны использовать Colemak-раскладку:"
-	echo "sudo cp DanOS/nvim/ .config/nvim -r"
-	echo "sudo cp DanOS/nvim /root/.config/nvim -r"
-	echo ""
-	echo "sudo cp DanOS/lf .config/lf/ -r"
-	echo "sudo cp DanOS/lf /root/.config/lf/ -r"
+	echo "Kopiruem sleduyuschuyu chast' skripta..."
+	cp ./DanOS/chroots/reboot_1.sh /mnt/
+	echo "Razmontirovanie /mnt/..."
+	# umount /mnt -l
+	echo "Vipolnenie perezagruzki..."
+	# reboot
+	exit
 
 	;;
 "2" )

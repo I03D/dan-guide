@@ -89,12 +89,3 @@ echo "X - bukva ustroystva."
 read
 grub-mkconfig -o /boot/grub/grub.cfg
 
-echo ""
-
-echo "Теперь ОС может нормально запускаться. Загрузить её."
-echo "Если сначала запустится установщик ArchLinux - выбрать \"Boot existing OS\"."
-read
-# umount /mnt -l
-# reboot
-exit
-
