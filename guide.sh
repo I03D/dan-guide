@@ -45,7 +45,7 @@ clear
 case "$it" in
 "1" )
 	echo "Устанавливаем пакеты base, linux, linux-firmware и sudo..."
-	pacstrap --noconfirm /mnt base linux linux-firmware sudo
+	pacstrap /mnt --noconfirm base linux linux-firmware sudo
 
 	echo ""
 
@@ -58,7 +58,7 @@ case "$it" in
 
 	mkdir -p /mnt/opt/scripts/
 	
-	echo ""
+	# echo ""
 
 	echo "Копирование следующих частей скрипта..."
 	cp -r ./chroots/* /mnt/opt/scripts/
