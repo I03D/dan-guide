@@ -36,7 +36,7 @@ read
 clear
 
 pacman-key --populate
-pacman-key --refresh-keys
+# pacman-key --refresh-keys
 # pacman -S archlinux-keyring
 
 echo "Выберите способ установки:"

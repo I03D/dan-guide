@@ -63,6 +63,7 @@ echo ""
 echo "Выполните следующие команды:"
 echo "1. EDITOR=nvim visudo"
 echo "2. Откомментировать строку \"%wheel all=(all:all) all\""
+read
 
 echo ""
 
