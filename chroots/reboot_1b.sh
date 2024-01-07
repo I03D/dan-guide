@@ -2,6 +2,9 @@
 
 # arch-chroot /mnt sudo sh /chroots/auto_2.sh
 
+echo "Нажмите Enter для начала установки программ."
+read
+
 echo "Ustanovka mesa..."
 # Nujna li mesa?
 sudo pacman -S --noconfirm mesa
