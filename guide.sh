@@ -35,10 +35,10 @@ echo "X - буква устройства; N - цифра раздела, есл
 read
 clear
 
-pacman-key --init
-pacman-key --populate
-### pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
-### Хотя может быть, команды "pacman-key --init; pacman-key --populate" исправили ситуацию.
+# pacman-key --init
+# pacman-key --populate
+# ### pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
+# ### Хотя может быть, команды "pacman-key --init; pacman-key --populate" исправили ситуацию.
 
 # pacman -S archlinux-keyring
 
