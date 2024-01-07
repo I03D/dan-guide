@@ -42,6 +42,8 @@ pacman-key --populate
 
 # pacman -S archlinux-keyring
 
+clear
+
 echo "Выберите способ установки:"
 echo "1. Автоматически"
 echo "2. Вручную"
