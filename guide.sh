@@ -21,19 +21,23 @@ read
 clear
 
 echo "Создать файловые системы:"
-echo "Для разделов fat32: mkfs.fat -F32 /dev/sdXN"
-echo "Для разделов ext4: mkfs.ext4 /dev/sdXN"
+echo "Для разделов fat32: mkfs.fat -F32 /dev/sdxn"
+echo "Для разделов ext4: mkfs.ext4 /dev/sdxn"
 echo "X - буква устройства; N - цифра раздела, если есть."
 
 read
 clear
 
 echo "Примонтируйте раздел с корневым каталогом к /mnt:"
-echo "mount /dev/sdXN /mnt"
+echo "mount /dev/sdxn /mnt"
 echo "X - буква устройства; N - цифра раздела, если есть."
 
 read
 clear
+
+pacman-key --populate
+pacman-key --refresh-keys
+# pacman -S archlinux-keyring
 
 echo "Выберите способ установки:"
 echo "1. Автоматически"
@@ -159,7 +163,7 @@ case "$it" in
 	echo "Откомментировать строку \"grub_disable_os_prober=\"true\"\""
 	echo "------------------------------------------------------------"
 	echo ""
-	echo "grub-install /dev/sdX"
+	echo "grub-install /dev/sdx"
 	echo "grub-mkconfig -o /boot/grub/grub.cfg"
 	
 	read
