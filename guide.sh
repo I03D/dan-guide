@@ -36,7 +36,7 @@ read
 clear
 
 pacman-key --populate
-pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
+# pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
 # pacman -S archlinux-keyring
 
 echo "Выберите способ установки:"
