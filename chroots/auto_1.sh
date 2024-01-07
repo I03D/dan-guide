@@ -92,4 +92,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo ""
 
 echo "Запись следующего скрипта в .bashrc для автозапуска..."
-echo "sh /opt/scripts/reboot_1.sh" >> /home/$username/.bashrc
+echo "sh /opt/scripts/reboot_1a.sh" >> /home/$username/.bashrc
