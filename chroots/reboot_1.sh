@@ -124,17 +124,22 @@ sudo chmod 777 /usr/bin/mouseless
 
 echo ""
 
-echo "-----------------------------------------------"
-echo "Требуется xdotool; разрешить пользователям читать ввод с клавиатурного файла:"
+echo "Ustanovka xdotool, trebuemogo dlya mouseless..."
 sudo pacman -S --noconfirm xdotool
 echo ""
+echo "Razreshenie chteniya polzovatelyami fayla klaviaturi..."
 echo "sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF"
 echo "KERNEL==\"uinput\", GROUP=\"$USER\", MODE:=\"0660\""
 echo "KERNEL==\"event*\", GROUP=\"$USER\", NAME=\"input/%k\", MODE=\"660\""
 echo "EOF"
 
-echo "(Отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
-echo "Тестируем:"
+echo ""
+
+echo "Zapis' sleduyushego skripta v i3 dlya zapuska..."
+echo "xterm -e /opt/scripts/reboot_2.sh" >> ~/.config/i3/config
+
+echo "(Rekomenduetsya otklyuchit' интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
+echo "Testirovanie mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
@@ -142,22 +147,5 @@ sudo mouseless --config ~/.config/mouseless/config.yaml
 echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
 echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
 echo "reboot"
-echo "Тестируем:"
-echo "sudo mouseless --config ~/.config/mouseless/config.yaml"
-
-echo "Устанавливаем автоматический запуск при старте системы:"
-sudo nvim /etc/systemd/system/mouseless.service
-sudo systemctl enable mouseless.service
-sudo systemctl start mouseless.service
-
-echo "Проверка:"
-sudo systemctl status mouseless.service
-echo "Должна быть пометка \"Active: active (running)\"."
-
-echo "Установка соответствующих настроек NeoVim и lf, если вы уже способны использовать Colemak-раскладку:"
-sudo cp DanOS/nvim/ .config/nvim -r
-sudo cp DanOS/nvim /root/.config/nvim -r
-echo ""
-sudo cp DanOS/lf .config/lf/ -r
-sudo cp DanOS/lf /root/.config/lf/ -r
+echo "Posle perezagruzki provedite test mouseless, najav, naprimer, alt+,"
 
