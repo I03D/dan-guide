@@ -321,9 +321,7 @@ case "$it" in
 	echo "sudo cp DanOS/lf .config/lf/ -r"
 	echo "sudo cp DanOS/lf /root/.config/lf/ -r"
 
-	
-
-	;;
+ 	;;
 * )
 	echo "test*"
 	;;
