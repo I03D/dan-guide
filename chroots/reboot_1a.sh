@@ -4,7 +4,6 @@ setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz
 
 tmux new-session -d
 
-
 tmux set -g status-style bg=red,fg=black
 tmux set -g pane-border-style bg=yellow,fg=yellow
 tmux set -g pane-active-border-style bg=yellow,fg=yellow
@@ -20,5 +19,6 @@ tmux bind -n C-l send-keys -X scroll-up
 
 tmux rename-window 'Dan-Guide'
 
-tmux send-keys "sudo sh /opt/scripts/auto_1b.sh"
+tmux attach
 
+tmux send-keys "sudo sh /opt/scripts/auto_1b.sh"
