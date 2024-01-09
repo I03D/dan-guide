@@ -87,7 +87,12 @@ case "$it" in
 
 	echo ""
 
-	echo "Размонтирование /mnt/..."
+ 	echo "Копирование DanOS в /mnt..."
+  	cp ../ /mnt/
+
+   	echo ""
+
+	echo "Размонтирование /mnt..."
 	# umount /mnt -l
 	echo "Выполнение перезагрузки..."
 	# reboot
