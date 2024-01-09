@@ -44,7 +44,7 @@ passwd
 
 echo ""
 
-echo "Введите имя супер-пользователя с правами sudo:"
+echo "Введите имя пользователя с правами sudo:"
 read -e username
 useradd -m $username
 
