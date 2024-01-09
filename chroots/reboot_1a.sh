@@ -1,7 +1,5 @@
 #!/bin/bash
 
-setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz
-
 tmux new-session -d
 
 tmux set -g status-style bg=red,fg=black
