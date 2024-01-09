@@ -97,5 +97,5 @@ pacman -S --noconfirm tmux
 echo ""
 
 echo "Запись следующего скрипта в .bashrc для автозапуска..."
-echo "setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz" >> /home/$username/.bashrc
-echo "sudo sh /opt/scripts/reboot_1a.sh" >> /etc/skel/.bashrc
+echo "setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz" >> /root/.profile
+echo "sudo sh /opt/scripts/reboot_1a.sh" >> /root/.profile
