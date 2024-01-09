@@ -50,13 +50,13 @@ useradd -m $username
 
 echo ""
 
-echo "Добавление пользователя в нужные группы..."
-usermod -aG wheel,audio,video,storage $username
+echo "Установка sudo..."
+pacman -S --noconfirm sudo
 
 echo ""
 
-echo "Установка sudo..."
-pacman -S --noconfirm sudo
+echo "Добавление пользователя в нужные группы..."
+usermod -aG wheel,audio,video,storage $username
 
 echo ""
 
