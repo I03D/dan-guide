@@ -51,7 +51,7 @@ useradd -m $username
 echo ""
 
 echo "Добавление пользователя в нужные группы..."
-usermod -aG wheel,audio,video,storage user
+usermod -aG wheel,audio,video,storage $username
 
 echo ""
 
