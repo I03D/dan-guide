@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# arch-chroot /mnt sudo sh /chroots/auto_2.sh
+clear
 
 echo "Нажмите Enter для начала установки программ."
 read
