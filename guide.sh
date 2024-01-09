@@ -78,10 +78,6 @@ case "$it" in
 
  	echo ""
 
-	echo "Установка tmux..."
- 	pacman -S --noconfirm tmux
-	echo ""
-
 	echo "Теперь ОС может нормально запускаться. Загрузить её."
 	# echo "Если сначала запустится установщик ArchLinux - выбрать \"Boot existing OS\"."
 	echo "Самый простой вариант - извлечь носитель ArchLinux. Также можно при запуске установщика использовать \"Boot existing OS\"."
