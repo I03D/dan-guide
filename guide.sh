@@ -35,6 +35,9 @@ echo "X - буква устройства; N - цифра раздела, есл
 read
 clear
 
+echo "Получаем pgp-ключи из archlinux-keyring..."
+pacman -S --noconfirm archlinux-keyring
+
 # pacman-key --init
 # pacman-key --populate
 # ### pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
