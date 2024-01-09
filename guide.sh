@@ -76,6 +76,10 @@ case "$it" in
 	cp -r ./chroots/* /mnt/opt/scripts/
 	arch-chroot /mnt sudo sh /opt/scripts/auto_1.sh
 
+ 	echo ""
+
+	echo "Установка tmux..."
+ 	pacman -S --noconfirm tmux
 	echo ""
 
 	echo "Теперь ОС может нормально запускаться. Загрузить её."
