@@ -19,7 +19,6 @@ tmux bind -n C-l send-keys -X scroll-up
 
 tmux rename-window 'Dan-Guide'
 
-tmux attach
-
 tmux send-keys "sudo sh /opt/scripts/reboot_1b.sh" Enter
 
+tmux attach
