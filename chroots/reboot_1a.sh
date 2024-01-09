@@ -22,3 +22,4 @@ tmux rename-window 'Dan-Guide'
 tmux attach
 
 tmux send-keys "sudo sh /opt/scripts/auto_1b.sh"
+
