@@ -97,7 +97,7 @@ pacman -S --noconfirm tmux
 echo ""
 
 echo "Запись следующего скрипта в .bashrc для автозапуска..."
-echo "if [ -z \"${TMUX}\" ]; then" >> /root/.profile
+echo "if [ -z \"\$\{TMUX\}\" ]; then" >> /root/.profile
 echo "    sudo sh /opt/scripts/reboot_1a.sh" >> /root/.profile
 echo "    setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz" >> /root/.profile
 echo "fi" >> /root/.profile
