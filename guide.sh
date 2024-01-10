@@ -38,10 +38,13 @@ clear
 echo "Получаем pgp-ключи из archlinux-keyring..."
 pacman -S --noconfirm archlinux-keyring
 
+### Все попытки обновить систему прекращены. Если не хватает места на виртуальной машине
+### для обновления live arch, скорее всего, нужно запускаться с 
+### параметром cow_diskspace=1G. Подробнее - ищите сами в интернет.
 # pacman-key --init
 # pacman-key --populate
-# ### pacman-key --refresh-keys # Без этой команды не всегда работает. Нужно сделать параметр запуска где-нибудь.
-# ### Хотя может быть, команды "pacman-key --init; pacman-key --populate" исправили ситуацию.
+# pacman-key --refresh-keys
+
 
 # pacman -S archlinux-keyring
 
