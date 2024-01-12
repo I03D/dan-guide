@@ -178,13 +178,6 @@ echo ""
 echo "Запись следующего скрипта в i3 для запуска..."
 echo "xterm -e /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
-echo "Запись следующего скрипта в .bashrc для автозапуска..."
-echo "if [ -z \"\$TMUX\" ]; then" >> /danil/.bashrc
-echo "    setfont /usr/share/kbd/consolefonts/cyr-sun16.psfu.gz" >> /danil/.bashrc
-echo "    sudo sh /opt/scripts/reboot_1a.sh" >> /danil/.bashrc
-echo "fi" >> /danil/.bashrc
-echo "" >> /danil/.bashrc
-
 echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
 echo "Testirovanie mouseless:"
 echo "reboot"
