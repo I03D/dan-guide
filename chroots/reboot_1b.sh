@@ -5,40 +5,77 @@ clear
 echo "Нажмите Enter для начала установки программ."
 read
 
-echo "Ustanovka mesa..."
+echo ""
+
+echo "Установка mesa..."
 # Nujna li mesa?
 sudo pacman -S --noconfirm mesa
-echo "Ustanovka X11..."
+
+echo ""
+
+echo "Установка X11..."
 sudo pacman -S --noconfirm xorg
 
-echo "Ustanovka LightDM..."
+echo ""
+
+echo "Установка LightDM..."
 sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
 sudo systemctl enable lightdm.service
 
-echo "Ustanovka i3 (i3WM)..."
+echo ""
+
+echo "Установка i3 (i3WM)..."
 sudo pacman -S --noconfirm i3
-echo "Ustanovka virtual'nogo terminala Xterm..." # Vsyo verno?
+
+echo ""
+
+echo "Установка виртуального терминала Xterm..." # Vsyo verno?
 sudo pacman -S --noconfirm xterm
-echo "Ustanovka PulseAudio..."
+
+echo ""
+
+echo "Установка PulseAudio..."
 sudo pacman -S --noconfirm pulseaudio
 
-echo "Ustanovka git..." # Nujen li?
+echo ""
+
+echo "Установка git..." # Nujen li?
 sudo pacman -S --noconfirm git
 # git clone https://github.com/i03d/DanOS.git
 
-echo "Ustanovka faylovogo menedjera lf..."
+echo ""
+
+echo "Установка файлового менеджера lf..."
 sudo pacman -S --noconfirm lf
 
-echo "Sozdanie papki konfiguracii i3..."
+echo ""
+
+echo "Создание папки конфигурации i3..."
 mkdir ~/.config/i3 -p
 
-echo "Peremeshenie faylov i3 iz DanOS..."
+echo ""
+
+echo "Перемещение файлов i3 из DanOS..."
 mv DanOS/i3/* .config/i3
 
-echo "Требуется для изображения рабочего стола:"
+echo ""
+
+echo "Установка feh для установки изображения рабочего стола:"
 sudo pacman -S --noconfirm feh
+
+echo ""
+
+echo "Изменение прав доступа к изображению рабочего стола для i3..."
 sudo chmod 777 ~/.config/i3/i3-background.png
+
+echo ""
+
+echo "Установка блокировщика экрана i3lock..."
 sudo pacman -S --noconfirm i3lock
+
+echo ""
+
+echo "Изменение прав доступа к изображению блокировщика экрана..."
 sudo chmod 777 ~/.config/i3/i3lock-background
 
 echo ""
@@ -46,30 +83,30 @@ echo ""
 echo "-----------------------------------------------"
 echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
 echo ""
-echo "Peremeshenie faylov dynamic-colors iz DanOS..."
+echo "Перемещение файлов dynamic-colors из DanOS..."
 mv DanOS/dynamic-colors/ .config/dynamic-colors/
-echo "Kopirovanie svetloy cvetovoy shemi v kachestve .Xresources..."
+echo "Копирование светлой цветовой схемы в .Xresources..."
 cp .config/dynamic-colors/colorschemes/LightScheme .Xresources
 echo ""
-echo "Zagruzka dynamic-colors..."
+echo "Загрузка dynamic-colors..."
 git clone https://github.com/hellricer/dynamic-colors.git
 echo ""
-echo "Skritie papki s pomoshyu dobavleniya tochki v nazvanie..."
+echo "Скрытие папки добавлением точки в название..."
 mv dynamic-colors/ .dynamic-colors/
-echo "Izmenenie prav dostupa na tyomnuyu shemu dlya i3..."
+echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
 sudo chmod 777 .config/i3/DarkTheme.sh
-echo "Izmenenie prav dostupa na svetluyu shemu dlya i3..."
+echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
 sudo chmod 777 .config/i3/LightTheme.sh
 echo ""
-echo "Ustanovka gcc, trebuemogo dlya dynamic-colors..."
+echo "Установка gcc, требуемого для dynamic-colors..."
 sudo pacman -S --noconfirm gcc
 echo "-----------------------------------------------"
 
 echo ""
 
 echo "-----------------------------------------------"
-echo "Ustanovka i nastroyka xkb-switch, neobhodimogo dlya pereklyucheniya raskladki:"
-echo "Zagruzka xkb-switch..."
+echo "Установка и настройка xkb-switch, необходимого для переключения раскладки:"
+echo "Загрузка xkb-switch..."
 git clone https://aur.archlinux.org/xkb-switch.git
 echo "cd xkb-switch"
 cd xkb-switch
