@@ -51,12 +51,12 @@ sudo pacman -S --noconfirm lf
 echo ""
 
 echo "Создание папки конфигурации i3..."
-mkdir ~/.config/i3 -p
+mkdir /home/danil/.config/i3 -p
 
 echo ""
 
 echo "Перемещение файлов i3 из DanOS..."
-mv DanOS/i3/* .config/i3
+mv /home/danil/DanOS/i3/* /home/danil/.config/i3
 
 echo ""
 
@@ -66,7 +66,7 @@ sudo pacman -S --noconfirm feh
 echo ""
 
 echo "Изменение прав доступа к изображению рабочего стола для i3..."
-sudo chmod 777 ~/.config/i3/i3-background.png
+sudo chmod 777 /home/danil/.config/i3/i3-background.png
 
 echo ""
 
@@ -76,7 +76,7 @@ sudo pacman -S --noconfirm i3lock
 echo ""
 
 echo "Изменение прав доступа к изображению блокировщика экрана..."
-sudo chmod 777 ~/.config/i3/i3lock-background
+sudo chmod 777 /home/danil/.config/i3/i3lock-background
 
 echo ""
 
@@ -114,8 +114,8 @@ echo "Ustanovka paketa base-devel dlya sborki paketa..."
 sudo pacman -S --noconfirm base-devel
 echo "Sborka paketa xkb-switch..."
 makepkg -si
-echo "cd ~/"
-cd ~/
+echo "cd /home/danil/"
+cd /home/danil/
 echo "Kopirovanie xkb-switch iz /usr/bin/ v /usr/local/bin/"
 sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 echo "Создать файл конфигурации для клавиатуры X11:"
@@ -139,7 +139,7 @@ echo "Ustanovka i nastroyka Browstarter, udobnogo launchera dlya brauzerov:"
 echo "Zagruzka Browstarter..."
 git clone https://github.com/i03d/Browstarter.git
 echo "Kopirovanie skripta v papku i3..."
-cp Browstarter/Browstarter.py ~/.config/i3/
+cp Browstarter/Browstarter.py /home/danil/.config/i3/
 echo "Izmenenie prav dostupa na skript..."
 sudo chmod 777 .config/i3/Browstarter.py
 echo "Ustanovka python, trebuemogo dlya Browstarter..."
@@ -153,10 +153,10 @@ echo "Устанавливаем mouseless:"
 echo "Zagruzka mouseless..."
 git clone https://github.com/jbensmann/mouseless.git
 echo "Sozdanie papki konfiguracii..."
-mkdir ~/.config/mouseless/
+mkdir /home/danil/.config/mouseless/
 echo "Peremeshenie konfiguracii iz DanOS v sistemu..."
-# sudo mv DanOS/mouseless/ ~/.config/mouseless
-mv DanOS/mouseless/config.yaml ~/.config/mouseless/config.yaml
+# sudo mv DanOS/mouseless/ /home/danil/.config/mouseless
+mv DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
 echo "Peremeshenie mouseless v /bin..."
 sudo mv DanOS/mouseless/mouseless /bin/mouseless
 echo "Izmenenie prav dostupa na mouseless..."
@@ -176,7 +176,7 @@ echo "EOF"
 echo ""
 
 echo "Zapis' sleduyushego skripta v i3 dlya zapuska..."
-echo "xterm -e /opt/scripts/reboot_2.sh" >> ~/.config/i3/config
+echo "xterm -e /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 echo "Запись следующего скрипта в .bashrc для автозапуска..."
 echo "if [ -z \"\$TMUX\" ]; then" >> /danil/.bashrc
@@ -190,7 +190,7 @@ echo "Testirovanie mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
-sudo mouseless --config ~/.config/mouseless/config.yaml
+sudo mouseless --config /home/danil/.config/mouseless/config.yaml
 echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
 echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
 echo "reboot"
