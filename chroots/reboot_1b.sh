@@ -116,7 +116,7 @@ echo "Sborka paketa xkb-switch..."
 makepkg -si
 echo "cd /home/danil/"
 cd /home/danil/
-echo "Kopirovanie xkb-switch iz /usr/bin/ v /usr/local/bin/"
+echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
 sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 echo "Создать файл конфигурации для клавиатуры X11:"
 echo "sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf"
@@ -135,14 +135,14 @@ echo "-----------------------------------------------"
 echo ""
 
 echo "-----------------------------------------------"
-echo "Ustanovka i nastroyka Browstarter, udobnogo launchera dlya brauzerov:"
-echo "Zagruzka Browstarter..."
+echo "Установка и настройка Browstarter, удобного лаунчера для браузеров:"
+echo "Загрузка Browstarter..."
 git clone https://github.com/i03d/Browstarter.git
-echo "Kopirovanie skripta v papku i3..."
+echo "Копирование скрипта в папку i3..."
 cp Browstarter/Browstarter.py /home/danil/.config/i3/
-echo "Izmenenie prav dostupa na skript..."
+echo "Изменение прав доступа к скрипту..."
 sudo chmod 777 .config/i3/Browstarter.py
-echo "Ustanovka python, trebuemogo dlya Browstarter..."
+echo "Установка python, требуемого для Browstarter..."
 sudo pacman -S --noconfirm python
 echo "-----------------------------------------------"
 
@@ -150,24 +150,24 @@ echo ""
 
 echo "-----------------------------------------------"
 echo "Устанавливаем mouseless:"
-echo "Zagruzka mouseless..."
+echo "Загрузка mouseless..."
 git clone https://github.com/jbensmann/mouseless.git
-echo "Sozdanie papki konfiguracii..."
+echo "Создание папки конфигурации..."
 mkdir /home/danil/.config/mouseless/
-echo "Peremeshenie konfiguracii iz DanOS v sistemu..."
+echo "Перемещение конфигурации из DanOS в систему..."
 # sudo mv DanOS/mouseless/ /home/danil/.config/mouseless
 mv DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
-echo "Peremeshenie mouseless v /bin..."
+echo "Перемещение mouseless в /bin..."
 sudo mv DanOS/mouseless/mouseless /bin/mouseless
-echo "Izmenenie prav dostupa na mouseless..."
+echo "Изменение прав доступа к mouseless..."
 sudo chmod 777 /usr/bin/mouseless
 
 echo ""
 
-echo "Ustanovka xdotool, trebuemogo dlya mouseless..."
+echo "Установка xdotool, требуемого для mouseless..."
 sudo pacman -S --noconfirm xdotool
 echo ""
-echo "Razreshenie chteniya polzovatelyami fayla klaviaturi..."
+echo "Разрешение чтения пользователями файла клавиатуры..."
 echo "sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF"
 echo "KERNEL==\"uinput\", GROUP=\"$USER\", MODE:=\"0660\""
 echo "KERNEL==\"event*\", GROUP=\"$USER\", NAME=\"input/%k\", MODE=\"660\""
@@ -175,7 +175,7 @@ echo "EOF"
 
 echo ""
 
-echo "Zapis' sleduyushego skripta v i3 dlya zapuska..."
+echo "Запись следующего скрипта в i3 для запуска..."
 echo "xterm -e /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 echo "Запись следующего скрипта в .bashrc для автозапуска..."
@@ -185,7 +185,7 @@ echo "    sudo sh /opt/scripts/reboot_1a.sh" >> /danil/.bashrc
 echo "fi" >> /danil/.bashrc
 echo "" >> /danil/.bashrc
 
-echo "(Rekomenduetsya otklyuchit' интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
+echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
 echo "Testirovanie mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
@@ -194,4 +194,4 @@ sudo mouseless --config /home/danil/.config/mouseless/config.yaml
 echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
 echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
 echo "reboot"
-echo "Posle perezagruzki provedite test mouseless, najav, naprimer, alt+,"
+echo "После перезагрузки проведите тест mouseless, нажав, например, alt+,"
