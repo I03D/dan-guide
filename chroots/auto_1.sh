@@ -48,6 +48,8 @@ echo "Введите имя пользователя с правами sudo:"
 read -e username
 useradd -m $username
 
+echo ""
+
 echo "Установка пароля для $username:"
 passwd $username
 
