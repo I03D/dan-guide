@@ -5,8 +5,6 @@ clear
 echo "Нажмите Enter для начала установки программ."
 read
 
-echo ""
-
 echo "Установка mesa..."
 # Nujna li mesa?
 sudo pacman -S --noconfirm mesa
