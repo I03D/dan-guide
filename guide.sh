@@ -91,7 +91,7 @@ case "$it" in
 	echo ""
 
  	echo "Копирование DanOS в /mnt..."
-  	cp ../ /mnt/ -r
+  	cp ../DanOS /mnt/ -r
 
    	echo ""
 
