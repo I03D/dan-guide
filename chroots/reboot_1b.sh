@@ -74,7 +74,7 @@ sudo pacman -S --noconfirm i3lock
 echo ""
 
 echo "Изменение прав доступа к изображению блокировщика экрана..."
-sudo chmod 777 /home/danil/.config/i3/i3lock-background
+sudo chmod 777 /home/danil/.config/i3/i3lock-background.png
 
 echo ""
 
