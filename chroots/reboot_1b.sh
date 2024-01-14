@@ -56,7 +56,7 @@ mkdir /home/danil/.config/i3 -p
 echo ""
 
 echo "Перемещение файлов i3 из DanOS..."
-mv /home/danil/DanOS/i3/* /home/danil/.config/i3
+mv /root/DanOS/i3/* /home/danil/.config/i3
 
 echo ""
 
@@ -84,7 +84,7 @@ echo "-----------------------------------------------"
 echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
 echo ""
 echo "Перемещение файлов dynamic-colors из DanOS..."
-mv DanOS/dynamic-colors/ .config/dynamic-colors/
+mv /root/DanOS/dynamic-colors/ /home/danil/.config/dynamic-colors/
 echo "Копирование светлой цветовой схемы в .Xresources..."
 cp .config/dynamic-colors/colorschemes/LightScheme .Xresources
 echo ""
@@ -155,10 +155,10 @@ git clone https://github.com/jbensmann/mouseless.git
 echo "Создание папки конфигурации..."
 mkdir /home/danil/.config/mouseless/
 echo "Перемещение конфигурации из DanOS в систему..."
-# sudo mv DanOS/mouseless/ /home/danil/.config/mouseless
-mv DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
+# sudo mv /root/DanOS/mouseless/ /home/danil/.config/mouseless
+mv /root/DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
-sudo mv DanOS/mouseless/mouseless /bin/mouseless
+sudo mv /root/DanOS/mouseless/mouseless /bin/mouseless
 echo "Изменение прав доступа к mouseless..."
 sudo chmod 777 /usr/bin/mouseless
 
