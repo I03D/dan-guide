@@ -98,7 +98,7 @@ bindcode $mod+61 exec uxterm -e lf
 bindcode Mod1+61 exec uxterm
 
 # start qutebrowser
-bindcode mod1+58 exec uxterm ~/.config/i3/qutestart.sh
+bindcode mod1+58 exec uxterm python ~/.config/i3/Browstarter.py
 
 # fast screenshot
 bindcode mod1+30 exec flameshot gui
