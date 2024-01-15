@@ -177,7 +177,7 @@ echo "Запись следующего скрипта в i3 для запуск
 echo "exec --no-startup-id xterm -e /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
-echo "Testirovanie mouseless:"
+echo "Тестирование mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
