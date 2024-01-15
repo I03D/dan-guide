@@ -108,7 +108,7 @@ echo "Загрузка xkb-switch..."
 git clone https://aur.archlinux.org/xkb-switch.git
 echo "cd xkb-switch"
 cd xkb-switch
-echo "Ustanovka paketa base-devel dlya sborki paketa..."
+echo "Установка base-devel для сборки пакета..."
 sudo pacman -S --noconfirm base-devel
 echo "Sborka paketa xkb-switch..."
 makepkg -si
