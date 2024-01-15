@@ -84,7 +84,7 @@ echo ""
 echo "Перемещение файлов dynamic-colors из DanOS..."
 mv /root/DanOS/dynamic-colors/ /home/danil/.config/dynamic-colors/
 echo "Копирование светлой цветовой схемы в .Xresources..."
-cp .config/dynamic-colors/colorschemes/LightScheme .Xresources
+cp /home/danil/.config/dynamic-colors/colorschemes/LightScheme .Xresources
 echo ""
 echo "Загрузка dynamic-colors..."
 git clone https://github.com/hellricer/dynamic-colors.git
