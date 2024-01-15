@@ -92,9 +92,9 @@ echo ""
 echo "Скрытие папки добавлением точки в название..."
 mv dynamic-colors/ .dynamic-colors/
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-sudo chmod 777 .config/i3/DarkTheme.sh
+sudo chmod 777 /home/danil.config/i3/DarkTheme.sh
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-sudo chmod 777 .config/i3/LightTheme.sh
+sudo chmod 777 /home/danil/.config/i3/LightTheme.sh
 echo ""
 echo "Установка gcc, требуемого для dynamic-colors..."
 sudo pacman -S --noconfirm gcc
