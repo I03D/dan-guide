@@ -106,6 +106,8 @@ echo "-----------------------------------------------"
 echo "Установка и настройка xkb-switch, необходимого для переключения раскладки:"
 echo "su danil"
 su danil
+echo "cd ~"
+cd ~
 echo "Загрузка xkb-switch..."
 git clone https://aur.archlinux.org/xkb-switch.git
 echo "cd xkb-switch"
