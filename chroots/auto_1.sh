@@ -70,8 +70,6 @@ echo "1. EDITOR=nvim visudo"
 echo "2. Откомментировать строку \"%wheel all=(all:all) all\""
 read
 
-echo ""
-
 echo "Установка NetworkManager..."
 pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
