@@ -184,7 +184,7 @@ echo "Тестирование mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
-sudo mouseless --config /home/danil/.config/mouseless/config.yaml
+echo "sudo mouseless --config /home/danil/.config/mouseless/config.yaml"
 echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
 echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
 echo "reboot"
