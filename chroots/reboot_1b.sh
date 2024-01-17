@@ -110,7 +110,7 @@ echo "cd xkb-switch"
 cd xkb-switch
 echo "Установка base-devel для сборки пакета..."
 sudo pacman -S --noconfirm base-devel
-echo "Sborka paketa xkb-switch..."
+echo "Cборка пакета xkb-switch..."
 makepkg -si
 echo "cd /home/danil/"
 cd /home/danil/
