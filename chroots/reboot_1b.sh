@@ -104,18 +104,16 @@ echo ""
 
 echo "-----------------------------------------------"
 echo "Установка и настройка xkb-switch, необходимого для переключения раскладки:"
-echo "su danil"
-su danil
-echo "cd ~"
-cd ~
+echo "cd /home/danil/"
+cd /home/danil
 echo "Загрузка xkb-switch..."
 git clone https://aur.archlinux.org/xkb-switch.git
 echo "cd xkb-switch"
 cd xkb-switch
 echo "Установка base-devel для сборки пакета..."
 sudo pacman -S --noconfirm base-devel
-echo "Cборка пакета xkb-switch..."
-makepkg -si
+echo "Cборка пакета xkb-switch от пользователя danil..."
+su -c "echo testtest | makepkg -Ssi" danil
 
 echo ""
 
