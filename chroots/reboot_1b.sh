@@ -6,7 +6,7 @@ echo "Нажмите Enter для начала установки програм
 read
 
 echo "Установка mesa..."
-# Nujna li mesa?
+# Нужна ли mesa?
 sudo pacman -S --noconfirm mesa
 
 echo ""
@@ -92,7 +92,7 @@ echo ""
 echo "Скрытие папки добавлением точки в название..."
 mv dynamic-colors/ /home/danil/.dynamic-colors/
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-sudo chmod 777 /home/danil.config/i3/DarkTheme.sh
+sudo chmod 777 /home/danil/.config/i3/DarkTheme.sh
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
 sudo chmod 777 /home/danil/.config/i3/LightTheme.sh
 echo ""
