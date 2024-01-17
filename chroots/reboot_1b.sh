@@ -112,6 +112,9 @@ echo "Установка base-devel для сборки пакета..."
 sudo pacman -S --noconfirm base-devel
 echo "Cборка пакета xkb-switch..."
 makepkg -si
+
+echo ""
+
 echo "cd /home/danil/"
 cd /home/danil/
 echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
