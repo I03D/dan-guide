@@ -156,14 +156,14 @@ echo "Создать файл конфигурации для клавиатур
 echo "sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf"
 echo ""
 echo "-----------------------------------------------"
-echo "Section \"InputClass\""
-echo "	  Identifier \"system-keyboard\""
-echo "	  MatchIsKeyboard \"on\""
-echo "	  Option \"XkbLayout\" \"us,ru,us\""
-echo "	  Option \"XkbModel\" \"pc104\""
-echo "	  Option \"XkbVariant\" \",,colemak_dh\""
-echo "	  Option \"XkbOptions\" \"\""
-echo "EndSection"
+echo "Section \"InputClass\"" >> /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  Identifier \"system-keyboard\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  MatchIsKeyboard \"on\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  Option \"XkbLayout\" \"us,ru,us\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  Option \"XkbModel\" \"pc104\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  Option \"XkbVariant\" \",,colemak_dh\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "	  Option \"XkbOptions\" \"\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+echo "EndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
 echo "-----------------------------------------------"
 
 echo ""
@@ -217,10 +217,10 @@ echo "Установка xdotool, требуемого для mouseless..."
 sudo pacman -S --noconfirm xdotool
 echo ""
 echo "Разрешение чтения пользователями файла клавиатуры..."
-echo "sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF"
-echo "KERNEL==\"uinput\", GROUP=\"$USER\", MODE:=\"0660\""
-echo "KERNEL==\"event*\", GROUP=\"$USER\", NAME=\"input/%k\", MODE=\"660\""
-echo "EOF"
+sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF
+KERNEL=="uinput", GROUP="$USER", MODE:="0660"
+KERNEL=="event*", GROUP="$USER", NAME="input/%k", MODE="660"
+EOF
 
 echo ""
 
