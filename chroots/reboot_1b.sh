@@ -205,7 +205,13 @@ echo "Перемещение mouseless в /bin..."
 echo ""
 
 sudo mv /root/DanOS/mouseless/mouseless /bin/mouseless
-echo "Изменение прав доступа к mouseless..."
+echo "Изменение прав доступа к mouseless..." #Возможно, не стоит.
+
+echo ""
+
+echo "Добавление mouseless в .profile для автозапуска..."
+
+echo mouseless --config /home/danil/.config/mouseless/config.yaml
 
 echo ""
 
