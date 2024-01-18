@@ -156,14 +156,14 @@ echo "Создать файл конфигурации для клавиатур
 echo "sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf"
 echo ""
 echo "-----------------------------------------------"
-echo "Section \"InputClass\"" >> /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  Identifier \"system-keyboard\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  MatchIsKeyboard \"on\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  Option \"XkbLayout\" \"us,ru,us\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  Option \"XkbModel\" \"pc104\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  Option \"XkbVariant\" \",,colemak_dh\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "	  Option \"XkbOptions\" \"\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-echo "EndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "Section \"InputClass\"" >> /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  Identifier \"system-keyboard\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  MatchIsKeyboard \"on\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  Option \"XkbLayout\" \"us,ru,us\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  Option \"XkbModel\" \"pc104\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  Option \"XkbVariant\" \",,colemak_dh\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "	  Option \"XkbOptions\" \"\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
+# echo "EndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
 echo "-----------------------------------------------"
 
 echo ""
