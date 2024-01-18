@@ -217,10 +217,10 @@ echo "Установка xdotool, требуемого для mouseless..."
 sudo pacman -S --noconfirm xdotool
 echo ""
 echo "Разрешение чтения пользователями файла клавиатуры..."
-sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF
-KERNEL=="uinput", GROUP="$USER", MODE:="0660"
-KERNEL=="event*", GROUP="$USER", NAME="input/%k", MODE="660"
-EOF
+# sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF
+# KERNEL=="uinput", GROUP="$USER", MODE:="0660"
+# KERNEL=="event*", GROUP="$USER", NAME="input/%k", MODE="660"
+# EOF
 
 echo ""
 
