@@ -113,14 +113,33 @@ echo ""
 
 echo "-----------------------------------------------"
 echo "Установка и настройка xkb-switch, необходимого для переключения раскладки:"
+
+echo ""
+
 echo "cd /home/danil/"
 cd /home/danil
+
+echo ""
+
 echo "Загрузка xkb-switch..."
 git clone https://aur.archlinux.org/xkb-switch.git
+
+echo ""
+
+chmod 777 xkb-switch/
+
+echo ""
+
 echo "cd xkb-switch"
 cd xkb-switch
+
+echo ""
+
 echo "Установка base-devel для сборки пакета..."
 sudo pacman -S --noconfirm base-devel
+
+echo ""
+
 echo "Cборка пакета xkb-switch от пользователя danil..."
 su -c "echo testtest | makepkg -Ssi" danil
 
@@ -128,6 +147,9 @@ echo ""
 
 echo "cd /home/danil/"
 cd /home/danil/
+
+echo ""
+
 echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
 sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 echo "Создать файл конфигурации для клавиатуры X11:"
