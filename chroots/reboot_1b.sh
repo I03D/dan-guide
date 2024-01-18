@@ -211,7 +211,7 @@ echo ""
 
 echo "Добавление mouseless в .profile для автозапуска..."
 
-echo mouseless --config /home/danil/.config/mouseless/config.yaml
+mouseless --config /home/danil/.config/mouseless/config.yaml > .profile
 
 echo ""
 
