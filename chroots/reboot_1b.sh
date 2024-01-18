@@ -186,14 +186,29 @@ echo "-----------------------------------------------"
 echo "Устанавливаем mouseless:"
 echo "Загрузка mouseless..."
 git clone https://github.com/jbensmann/mouseless.git
+
+echo ""
+
 echo "Создание папки конфигурации..."
+
+echo ""
+
 mkdir /home/danil/.config/mouseless/
 echo "Перемещение конфигурации из DanOS в систему..."
+
+echo ""
+
 # sudo mv /root/DanOS/mouseless/ /home/danil/.config/mouseless
 mv /root/DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
+
+echo ""
+
 sudo mv /root/DanOS/mouseless/mouseless /bin/mouseless
 echo "Изменение прав доступа к mouseless..."
+
+echo ""
+
 sudo chmod 777 /usr/bin/mouseless
 
 echo ""
@@ -210,9 +225,14 @@ echo "EOF"
 echo ""
 
 echo "Запись следующего скрипта в i3 для запуска..."
+
+echo ""
+
 echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
+
+# Лучше упомянуть о тестировании после перезагрузки.
 echo "Тестирование mouseless:"
 echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
