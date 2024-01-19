@@ -204,18 +204,21 @@ echo "Перемещение mouseless в /bin..."
 
 echo ""
 
-sudo mv /root/DanOS/mouseless/mouseless /bin/mouseless
+sudo mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
 echo "Изменение прав доступа к mouseless..." #Возможно, не стоит.
 
 echo ""
 
-echo "Добавление mouseless в .profile для автозапуска..."
+echo "Копирование службы автозапуска mouseless..."
+cp /root/DanOS/mouseless/mouseless.service /etc/systemd/system/mouseless.service
 
-mouseless --config /home/danil/.config/mouseless/config.yaml > .profile
+echo "Разрешение mouseless на выполнение..."
+sudo chmod +x /usr/local/bin/mouseless
 
 echo ""
 
-sudo chmod 777 /usr/bin/mouseless
+echo "Включение службы..."
+systemctl enable mouseless.service
 
 echo ""
 
