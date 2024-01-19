@@ -241,15 +241,24 @@ echo ""
 
 echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
-echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
 
-# Лучше упомянуть о тестировании после перезагрузки.
-echo "Тестирование mouseless:"
-echo "reboot"
 echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
-echo "sudo mouseless --config /home/danil/.config/mouseless/config.yaml"
-echo "Если не получается:                 НО ЕСЛИ ВСЁ ВЕРНО, ТО ОТ РУТА ЗАПУСТИТСЯ!"
-echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf"
-echo "reboot"
-echo "После перезагрузки проведите тест mouseless, нажав, например, alt+,"
+
+echo "Нажмите Enter для перезагрузки."
+read
+reboot
+
+# Перенести в другой скрипт:
+echo "Тестирование mouseless:"
+echo "Проведите тест mouseless, нажав, например, alt+,"
+echo ""
+echo "(Рекомендуется отключить интеграцию мыши при использовании виртуальной машины. Так будет виден подлинный курсор, не всегда совпадающий с вашим.)"
+
+echo ""
+
+echo "Если не получается, то, скорее всего, нужно загрузить модуль uinput и перезагрузить систему:"
+echo "echo \"uinput\" | sudo tee /etc/modules-load.d/uinput.conf && reboot"
+
+
+
