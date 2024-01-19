@@ -212,6 +212,8 @@ echo ""
 echo "Копирование службы автозапуска mouseless..."
 cp /root/DanOS/mouseless/mouseless.service /etc/systemd/system/mouseless.service
 
+echo ""
+
 echo "Разрешение mouseless на выполнение..."
 sudo chmod +x /usr/local/bin/mouseless
 
