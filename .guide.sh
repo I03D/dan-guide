@@ -64,11 +64,12 @@ case "$it" in
  	echo "Установка pacman-contrib для rankmirrors..."
   	pacman -S --noconfirm pacman-contrib
 
+	echo "Сортировка зеркал в mirrorlist по скорости..."
    	rankmirrors /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist
 
  	echo ""
 
-	echo "Устанавливаем пакеты base, linux, linux-firmware и sudo..."
+	echo "Установка пакетов base, linux, linux-firmware и sudo..."
 	pacstrap /mnt --noconfirm base linux linux-firmware sudo
 
 	echo ""
