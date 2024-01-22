@@ -198,6 +198,8 @@ then
     cp /root/DanOS/lf /root/.config/lf/ -r
 fi
 
+echo ""
+
 echo "Копирование файла конфигурации для клавиатуры X11..."
 if [[ $colemak == "1" ]];
 then
