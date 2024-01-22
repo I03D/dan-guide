@@ -56,6 +56,11 @@ clear
 
 case "$it" in
 "1" )
+	echo "Получаем pgp-ключи из archlinux-keyring..."
+	pacman -S --noconfirm archlinux-keyring
+
+ 	echo ""
+
 	echo "Устанавливаем пакеты base, linux, linux-firmware и sudo..."
 	pacstrap /mnt --noconfirm base linux linux-firmware sudo
 
