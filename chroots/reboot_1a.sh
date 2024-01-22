@@ -5,7 +5,7 @@ tmux new-session -d
 tmux set -g status-style bg=red,fg=black
 tmux set -g pane-border-style bg=yellow,fg=yellow
 tmux set -g pane-active-border-style bg=yellow,fg=yellow
-tmux set -g status-position top
+tmux set -g status off
 tmux set -g window-style bg=red,fg=black
 tmux set -g window-active-style bg=yellow,fg=black
 
