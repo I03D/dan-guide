@@ -56,8 +56,15 @@ clear
 
 case "$it" in
 "1" )
-	echo "Получаем pgp-ключи из archlinux-keyring..."
+	echo "Получаем gpg-ключи из archlinux-keyring..."
 	pacman -S --noconfirm archlinux-keyring
+
+	echo ""
+
+ 	echo "Установка pacman-contrib для rankmirrors..."
+  	pacman -S --noconfirm pacman-contrib
+
+   	rankmirrors /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist
 
  	echo ""
 
