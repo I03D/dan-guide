@@ -188,6 +188,7 @@ read colemak
 if [[ $colemak == "1" ]];
 then
     echo "Копирование конфигурации NeoVim в root и danil..."
+    mkdir /root/.config/
     cp /root/DanOS/nvim/ /home/danil/.config/nvim -r
     cp /root/DanOS/nvim /root/.config/nvim -r
     echo ""
@@ -199,9 +200,9 @@ fi
 echo "Копирование файла конфигурации для клавиатуры X11:"
 if [[ $colemak == "1" ]];
 then
-    echo cp /root/DanOS/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
+    cp /root/DanOS/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
 else
-    echo cp /root/DanOS/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
+    cp /root/DanOS/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
 fi
 echo "-----------------------------------------------"
 echo "Установка и настройка Browstarter, удобного лаунчера для браузеров:"
