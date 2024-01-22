@@ -23,7 +23,7 @@ tmux bind -n C-i send-keys -X scroll-up
 
 tmux rename-window 'Dan-Guide'
 
-tmux send-keys "alias cfdisk=\"cfdisk && clear\"" enter
+tmux send-keys "alias cfdisk=\"cfdisk && clear\" && clear" enter
 
 tmux split-window -h
 
