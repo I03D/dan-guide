@@ -169,7 +169,7 @@ sudo pacman -S --noconfirm base-devel
 echo ""
 
 echo "Cборка пакета xkb-switch от пользователя danil..."
-su -c "echo testtest | makepkg -Ssi" danil
+su -c "echo root | makepkg -Ssi" danil
 
 echo ""
 
@@ -180,22 +180,34 @@ echo ""
 
 echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
 sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
-echo "Создать файл конфигурации для клавиатуры X11:"
-echo "sudo nvim /etc/X11/xorg.conf.d/00-keyboard.conf"
-echo ""
-echo "-----------------------------------------------"
-# echo "Section \"InputClass\"" >> /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  Identifier \"system-keyboard\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  MatchIsKeyboard \"on\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  Option \"XkbLayout\" \"us,ru,us\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  Option \"XkbModel\" \"pc104\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  Option \"XkbVariant\" \",,colemak_dh\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "	  Option \"XkbOptions\" \"\"" > /etc/X11/xorg.conf.d/00-keyboard.conf
-# echo "EndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
+
 echo "-----------------------------------------------"
 
 echo ""
 
+echo "-----------------------------------------------"
+echo "Установить раскладку Colemak и соответствующие настройки для NeoVim и lf?
+echo "1. Да"
+echo "2. Нет"
+read colemak
+if [[ $colemak == "1" ]];
+then
+    echo "Копирование конфигурации NeoVim в root и danil..."
+    cp /root/DanOS/nvim/ /home/danil/.config/nvim -r
+    cp /root/DanOS/nvim /root/.config/nvim -r
+    echo ""
+    echo "Копирование конфигурации NeoVim в root и danil..."
+    cp /root/DanOS/lf /home/danil/.config/lf/ -r
+    cp /root/DanOS/lf /root/.config/lf/ -r
+fi
+
+echo "Копирование файла конфигурации для клавиатуры X11:"
+if [[ $colemak == "1" ]];
+then
+    echo cp /root/DanOS/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
+else
+    echo cp /root/DanOS/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
+fi
 echo "-----------------------------------------------"
 echo "Установка и настройка Browstarter, удобного лаунчера для браузеров:"
 echo "Загрузка Browstarter..."
@@ -270,7 +282,7 @@ echo ""
 echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 
-echo "(Не забываем загружать свою ОС, а не установщик, если он ещё присутствует.)"
+echo "(Не забывайте загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
 
 echo "Нажмите Enter для перезагрузки."
