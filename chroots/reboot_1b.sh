@@ -2,7 +2,35 @@
 
 clear
 
-echo "Нажмите Enter для начала установки программ."
+echo "Нажмите Enter для начала установки программ и добавления пользователей."
+read
+
+clear
+
+echo "Введите имя пользователя с правами sudo:"
+read -e username
+useradd -m $username
+
+echo ""
+
+echo "Установка пароля для $username:"
+passwd $username
+
+echo ""
+
+echo "Установка sudo..."
+pacman -S --noconfirm sudo
+
+echo ""
+
+echo "Добавление пользователя в нужные группы..."
+usermod -aG wheel,audio,video,storage $username
+
+echo ""
+
+echo "Выполните следующие команды:"
+echo "1. EDITOR=nvim visudo"
+echo "2. Откомментировать строку \"%wheel all=(all:all) all\""
 read
 
 echo "Установка mesa..."
