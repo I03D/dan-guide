@@ -12,10 +12,14 @@ tmux set -g window-style bg=red,fg=black
 tmux set -g window-active-style bg=yellow,fg=black
 
 tmux bind -n C-j select-pane -t:.+
+tmux bind -n C-n select-pane -t:.+
 tmux bind -n C-f select-pane -t:.+
+tmux bind -n C-t select-pane -t:.+
 
 tmux bind -n C-k send-keys -X scroll-down
+tmux bind -n C-e send-keys -X scroll-down
 tmux bind -n C-l send-keys -X scroll-up
+tmux bind -n C-i send-keys -X scroll-up
 
 tmux rename-window 'Dan-Guide'
 
