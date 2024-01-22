@@ -197,7 +197,7 @@ then
     cp /root/DanOS/lf /root/.config/lf/ -r
 fi
 
-echo "Копирование файла конфигурации для клавиатуры X11:"
+echo "Копирование файла конфигурации для клавиатуры X11..."
 if [[ $colemak == "1" ]];
 then
     cp /root/DanOS/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
