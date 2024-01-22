@@ -47,21 +47,6 @@ echo "X - буква устройства; N - цифра раздела, есл
 read
 clear
 
-echo "Получаем pgp-ключи из archlinux-keyring..."
-pacman -S --noconfirm archlinux-keyring
-
-### Все попытки обновить систему прекращены. Если не хватает места на виртуальной машине
-### для обновления live arch, скорее всего, нужно запускаться с 
-### параметром cow_spacesize=2G. Подробнее - ищите сами в интернет.
-# pacman-key --init
-# pacman-key --populate
-# pacman-key --refresh-keys
-
-
-# pacman -S archlinux-keyring
-
-clear
-
 echo "Выберите способ установки:"
 echo "1. Автоматически"
 echo "2. Вручную"
