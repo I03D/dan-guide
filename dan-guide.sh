@@ -22,7 +22,7 @@ tmux rename-window 'Dan-Guide'
 tmux split-window -h
 
 command="cd $(dirname "$0")"
-tmux send-keys "${command}; sudo sh guide.sh" enter
+tmux send-keys "${command}; sudo sh .guide.sh" enter
 
 # tmux select-pane -t:.0 -P 'bg=yellow fg=black'
 # tmux select-pane -t:.2 -P 'bg=yellow fg=black'
