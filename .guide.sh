@@ -74,7 +74,7 @@ case "$it" in
 
 	echo "Копирование следующих частей скрипта..."
 	cp -r ./chroots/* /mnt/opt/scripts/
-	arch-chroot /mnt sudo sh /opt/scripts/auto_1.sh
+	arch-chroot /mnt sh /opt/scripts/auto_1.sh
 
  	echo ""
 
