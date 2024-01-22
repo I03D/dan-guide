@@ -164,7 +164,8 @@ sudo pacman -S --noconfirm base-devel
 echo ""
 
 echo "Cборка пакета xkb-switch от пользователя danil..."
-su -c "echo root | makepkg -Ssi" danil
+su -c "makepkg -sf" danil
+pacman -U *.pkg*
 
 echo ""
 
