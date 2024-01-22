@@ -23,6 +23,8 @@ tmux bind -n C-i send-keys -X scroll-up
 
 tmux rename-window 'Dan-Guide'
 
+tmux send-keys "alias cfdisk=\"cfdisk && clear\"" enter
+
 tmux split-window -h
 
 command="cd $(dirname "$0")"
