@@ -44,32 +44,6 @@ passwd
 
 echo ""
 
-echo "Введите имя пользователя с правами sudo:"
-read -e username
-useradd -m $username
-
-echo ""
-
-echo "Установка пароля для $username:"
-passwd $username
-
-echo ""
-
-echo "Установка sudo..."
-pacman -S --noconfirm sudo
-
-echo ""
-
-echo "Добавление пользователя в нужные группы..."
-usermod -aG wheel,audio,video,storage $username
-
-echo ""
-
-echo "Выполните следующие команды:"
-echo "1. EDITOR=nvim visudo"
-echo "2. Откомментировать строку \"%wheel all=(all:all) all\""
-read
-
 echo "Установка NetworkManager..."
 pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
