@@ -2,11 +2,6 @@
 
 clear
 
-echo "Нажмите Enter для начала установки программ и добавления пользователей."
-read
-
-clear
-
 echo "Введите имя пользователя с правами sudo:"
 read -e username
 useradd -m $username
