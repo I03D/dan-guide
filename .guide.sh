@@ -104,7 +104,7 @@ case "$it" in
   
 	echo "Выполнение перезагрузки..."
 	# exit
-	# reboot
+	reboot
 
 	;;
 "2" )
