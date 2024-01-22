@@ -241,7 +241,6 @@ echo "Перемещение mouseless в /bin..."
 echo ""
 
 sudo mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
-echo "Изменение прав доступа к mouseless..." #Возможно, не стоит.
 
 echo ""
 
