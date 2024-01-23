@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 export DYNAMIC_COLORS_COLORSCHEMES=/etc/dynamic-colors/colorschemes
 export XDG_CONFIG_HOME=/etc
