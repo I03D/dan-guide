@@ -3,6 +3,6 @@ Section "InputClass"
 	  MatchIsKeyboard "on"
 	  Option "XkbLayout" "us,ru,us"
 	  Option "XkbModel" "pc104"
-	  Option "XkbVariant" ",,colemak_dh"
+	  Option "XkbVariant" "colemak_dh,,"
 	  Option "XkbOptions" ""
 EndSection
