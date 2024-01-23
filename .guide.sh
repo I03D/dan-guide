@@ -64,6 +64,8 @@ case "$it" in
  	echo "Установка pacman-contrib для rankmirrors..."
   	pacman -S --noconfirm pacman-contrib
 
+	echo ""
+
 	echo "Сортировка зеркал в mirrorlist по скорости..."
    	rankmirrors /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist
 
