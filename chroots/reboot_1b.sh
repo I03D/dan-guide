@@ -108,7 +108,7 @@ echo "Перемещение файлов dynamic-colors из DanOS..."
 
 echo ""
 
-mv /root/DanOS/dynamic-colors/ /home/danil/.config/dynamic-colors/
+mv /root/DanOS/dynamic-colors/ /root/.config/dynamic-colors/
 echo "Копирование светлой цветовой схемы в .Xresources..."
 cp /home/danil/.config/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
 echo ""
@@ -119,12 +119,12 @@ echo "Скрытие папки добавлением точки в назва�
 
 echo ""
 
-mv dynamic-colors/ /home/danil/.dynamic-colors/
+mv dynamic-colors/ /root/.dynamic-colors/
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
+sudo chmod 777 /home/danil/.config/i3/DarkTheme.sh
 
 echo ""
 
-sudo chmod 777 /home/danil/.config/i3/DarkTheme.sh
 echo "Изменение прав доступа к светлой цветовой схеме для i3..."
 sudo chmod 777 /home/danil/.config/i3/LightTheme.sh
 echo ""
