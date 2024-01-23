@@ -120,7 +120,7 @@ echo "Скрытие папки добавлением точки в назва�
 
 echo ""
 
-mv dynamic-colors/ /root/.dynamic-colors
+mv dynamic-colors/ /root/.dynamic-colors/dynamic-colors
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
 sudo chmod 100 /home/danil/.config/i3/DarkTheme.sh
 
