@@ -167,7 +167,7 @@ echo ""
 
 echo "Cборка пакета xkb-switch от пользователя danil..."
 su -c "makepkg -sf" danil
-pacman -U *.pkg*
+pacman -U *.pkg* --noconfirm
 
 echo ""
 
