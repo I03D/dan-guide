@@ -111,7 +111,7 @@ echo ""
 mv /root/DanOS/dynamic-colors/ /etc/dynamic-colors/
 sudo chmod 006 /etc/dynamic-colors/colorscheme
 echo "Копирование светлой цветовой схемы в .Xresources..."
-cp /root/.config/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
+cp /etc/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
 echo ""
 echo "Загрузка dynamic-colors..."
 git clone https://github.com/hellricer/dynamic-colors.git
