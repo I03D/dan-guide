@@ -158,8 +158,9 @@ cd xkb-switch
 
 echo ""
 
-echo "Установка base-devel для сборки пакета..."
-sudo pacman -S --noconfirm base-devel
+echo "Установка base-devel и cmake для сборки пакета..."
+sudo pacman -S --noconfirm base-devel cmake
+
 
 echo ""
 
