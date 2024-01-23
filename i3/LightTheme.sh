@@ -2,6 +2,6 @@
 
 for filename in /dev/pts/*; do
 	echo $filename
-	~/.dynamic-colors/bin/dynamic-colors switch LightScheme > $filename
+	/root/.dynamic-colors/bin/dynamic-colors switch LightScheme > $filename
 done
 
