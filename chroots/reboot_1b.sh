@@ -122,12 +122,12 @@ echo ""
 
 mv dynamic-colors/bin/dynamic-colors /bin/dynamic-colors # Или лучше /usr/bin/?
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-sudo chmod 100 /home/danil/.config/i3/DarkTheme.sh
+sudo chmod 111 /home/danil/.config/i3/DarkTheme.sh
 
 echo ""
 
 echo "Изменение прав доступа к светлой цветовой схеме для i3..."
-sudo chmod 100 /home/danil/.config/i3/LightTheme.sh
+sudo chmod 111 /home/danil/.config/i3/LightTheme.sh
 echo ""
 echo "Установка gcc, требуемого для dynamic-colors..."
 sudo pacman -S --noconfirm gcc
