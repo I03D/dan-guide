@@ -16,4 +16,10 @@ read
 clear
 
 echo "Установка завершена. Нажмите Enter для закрытия и удаления остаточных файлов."
+
+echo ""
+
+echo "xrandr --listmonitors"
+echo "xrandr --output Virtual-1 --mode 1280x720
+
 read
