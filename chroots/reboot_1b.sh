@@ -2,6 +2,12 @@
 
 clear
 
+gap() {
+    echo "-----------------------------------------------"
+    echo -e "\n\n\n\n\n"
+    echo "-----------------------------------------------"
+}
+
 echo "Введите имя пользователя с правами sudo:"
 read -e username
 useradd -m $username
@@ -99,9 +105,10 @@ echo ""
 echo "Изменение прав доступа к изображению блокировщика экрана..."
 sudo chmod 777 /home/danil/.config/i3/i3lock-background.png
 
-echo ""
 
-echo "-----------------------------------------------"
+gap
+
+
 echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
 echo ""
 echo "Перемещение файлов dynamic-colors из DanOS..."
@@ -131,11 +138,11 @@ sudo chmod 555 /home/danil/.config/i3/LightTheme.sh
 echo ""
 echo "Установка gcc, требуемого для dynamic-colors..."
 sudo pacman -S --noconfirm gcc
-echo "-----------------------------------------------"
 
-echo ""
 
-echo "-----------------------------------------------"
+gap
+
+
 echo "Установка и настройка xkb-switch, необходимого для переключения раскладки:"
 
 echo ""
@@ -179,11 +186,9 @@ echo ""
 echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
 sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 
-echo "-----------------------------------------------"
 
-echo ""
+gap
 
-echo "-----------------------------------------------"
 
 echo "Установка ungoogled-chromium..."
 git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
@@ -193,7 +198,10 @@ su -c "makepkg -sf" danil
 pacman -U *.pkg* --noconfirm
 cd ..
 
-echo "-----------------------------------------------"
+
+gap
+
+
 echo "Установить раскладку Colemak и соответствующие настройки для NeoVim и lf?"
 echo "1. Да"
 echo "2. Нет"
@@ -219,7 +227,11 @@ then
 else
     cp /root/DanOS/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
 fi
-echo "-----------------------------------------------"
+
+
+gap
+
+
 echo "Установка и настройка Browstarter, удобного лаунчера для браузеров:"
 echo "Загрузка Browstarter..."
 git clone https://github.com/i03d/Browstarter.git
@@ -229,11 +241,11 @@ echo "Изменение прав доступа к скрипту..."
 sudo chmod 777 .config/i3/Browstarter.py
 echo "Установка python, требуемого для Browstarter..."
 sudo pacman -S --noconfirm python
-echo "-----------------------------------------------"
 
-echo ""
 
-echo "-----------------------------------------------"
+gap
+
+
 echo "Устанавливаем mouseless:"
 echo "Загрузка mouseless..."
 git clone https://github.com/jbensmann/mouseless.git
