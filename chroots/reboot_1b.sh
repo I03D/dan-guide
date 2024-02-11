@@ -184,6 +184,16 @@ echo "-----------------------------------------------"
 echo ""
 
 echo "-----------------------------------------------"
+
+echo "Установка ungoogled-chromium..."
+git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
+cd ungoogled-chromium-bin
+sudo pacman -U --noconfirm 
+su -c "makepkg -sf" danil
+pacman -U *.pkg* --noconfirm
+cd ..
+
+echo "-----------------------------------------------"
 echo "Установить раскладку Colemak и соответствующие настройки для NeoVim и lf?"
 echo "1. Да"
 echo "2. Нет"
