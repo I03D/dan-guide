@@ -36,44 +36,44 @@ read
 
 echo "Установка mesa..."
 # Нужна ли mesa?
-sudo pacman -S --noconfirm mesa
+pacman -S --noconfirm mesa
 
 echo ""
 
 echo "Установка X11..."
-sudo pacman -S --noconfirm xorg
+pacman -S --noconfirm xorg
 
 echo ""
 
 echo "Установка LightDM..."
-sudo pacman -S --noconfirm lightdm lightdm-gtk-greeter
-sudo systemctl enable lightdm.service
+pacman -S --noconfirm lightdm lightdm-gtk-greeter
+systemctl enable lightdm.service
 
 echo ""
 
 echo "Установка i3 (i3WM)..."
-sudo pacman -S --noconfirm i3
+pacman -S --noconfirm i3
 
 echo ""
 
 echo "Установка виртуального терминала Xterm..." # Vsyo verno?
-sudo pacman -S --noconfirm xterm
+pacman -S --noconfirm xterm
 
 echo ""
 
 echo "Установка PulseAudio..."
-sudo pacman -S --noconfirm pulseaudio
+pacman -S --noconfirm pulseaudio
 
 echo ""
 
 echo "Установка git..." # Nujen li?
-sudo pacman -S --noconfirm git
+pacman -S --noconfirm git
 # git clone https://github.com/i03d/DanOS.git
 
 echo ""
 
 echo "Установка файлового менеджера lf..."
-sudo pacman -S --noconfirm lf
+pacman -S --noconfirm lf
 
 echo ""
 
@@ -88,22 +88,22 @@ mv /root/DanOS/i3/* /home/danil/.config/i3
 echo ""
 
 echo "Установка feh для установки изображения рабочего стола:"
-sudo pacman -S --noconfirm feh
+pacman -S --noconfirm feh
 
 echo ""
 
 echo "Изменение прав доступа к изображению рабочего стола для i3..."
-sudo chmod 777 /home/danil/.config/i3/i3-background.png
+chmod 777 /home/danil/.config/i3/i3-background.png
 
 echo ""
 
 echo "Установка блокировщика экрана i3lock..."
-sudo pacman -S --noconfirm i3lock
+pacman -S --noconfirm i3lock
 
 echo ""
 
 echo "Изменение прав доступа к изображению блокировщика экрана..."
-sudo chmod 777 /home/danil/.config/i3/i3lock-background.png
+chmod 777 /home/danil/.config/i3/i3lock-background.png
 
 
 gap
@@ -116,7 +116,7 @@ echo "Перемещение файлов dynamic-colors из DanOS..."
 echo ""
 
 mv /root/DanOS/dynamic-colors/ /etc/dynamic-colors/
-sudo chmod 006 /etc/dynamic-colors/colorscheme
+chmod 006 /etc/dynamic-colors/colorscheme
 echo "Копирование светлой цветовой схемы в .Xresources..."
 cp /etc/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
 echo ""
@@ -129,15 +129,15 @@ echo ""
 
 mv dynamic-colors/bin/dynamic-colors /bin/dynamic-colors # Или лучше /usr/bin/?
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-sudo chmod 555 /home/danil/.config/i3/DarkTheme.sh
+chmod 555 /home/danil/.config/i3/DarkTheme.sh
 
 echo ""
 
 echo "Изменение прав доступа к светлой цветовой схеме для i3..."
-sudo chmod 555 /home/danil/.config/i3/LightTheme.sh
+chmod 555 /home/danil/.config/i3/LightTheme.sh
 echo ""
 echo "Установка gcc, требуемого для dynamic-colors..."
-sudo pacman -S --noconfirm gcc
+pacman -S --noconfirm gcc
 
 
 gap
@@ -167,7 +167,7 @@ cd xkb-switch
 echo ""
 
 echo "Установка base-devel и cmake для сборки пакета..."
-sudo pacman -S --noconfirm base-devel cmake
+pacman -S --noconfirm base-devel cmake
 
 
 echo ""
@@ -184,7 +184,7 @@ cd /home/danil/
 echo ""
 
 echo "Копирование xkb-switch из /usr/bin/ в /usr/local/bin/"
-sudo cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
+cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 
 
 gap
@@ -193,7 +193,7 @@ gap
 echo "Установка ungoogled-chromium..."
 git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
 cd ungoogled-chromium-bin
-sudo pacman -U --noconfirm 
+pacman -U --noconfirm 
 su -c "makepkg -sf" danil
 pacman -U *.pkg* --noconfirm
 cd ..
@@ -238,9 +238,9 @@ git clone https://github.com/i03d/Browstarter.git
 echo "Копирование скрипта в папку i3..."
 cp Browstarter/Browstarter.py /home/danil/.config/i3/
 echo "Изменение прав доступа к скрипту..."
-sudo chmod 777 .config/i3/Browstarter.py
+chmod 777 .config/i3/Browstarter.py
 echo "Установка python, требуемого для Browstarter..."
-sudo pacman -S --noconfirm python
+pacman -S --noconfirm python
 
 
 gap
@@ -261,13 +261,13 @@ echo "Перемещение конфигурации из DanOS в систем
 
 echo ""
 
-# sudo mv /root/DanOS/mouseless/ /home/danil/.config/mouseless
+# mv /root/DanOS/mouseless/ /home/danil/.config/mouseless
 mv /root/DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
 
 echo ""
 
-sudo mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
+mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
 
 echo ""
 
@@ -277,7 +277,7 @@ cp /root/DanOS/mouseless/mouseless.service /etc/systemd/system/mouseless.service
 echo ""
 
 echo "Разрешение mouseless на выполнение..."
-sudo chmod +x /usr/local/bin/mouseless
+chmod +x /usr/local/bin/mouseless
 
 echo ""
 
@@ -287,13 +287,19 @@ systemctl enable mouseless.service
 echo ""
 
 echo "Установка xdotool, требуемого для mouseless..."
-sudo pacman -S --noconfirm xdotool
+pacman -S --noconfirm xdotool
 echo ""
 echo "Разрешение чтения пользователями файла клавиатуры..."
-# sudo tee /etc/udev/rules.d/99-$USER.rules <<EOF
+# tee /etc/udev/rules.d/99-$USER.rules <<EOF
 # KERNEL=="uinput", GROUP="$USER", MODE:="0660"
 # KERNEL=="event*", GROUP="$USER", NAME="input/%k", MODE="660"
 # EOF
+
+echo ""
+
+echo "Передача /home/danil/.config/ и всего её содержимого пользователю..."
+
+
 
 echo ""
 
