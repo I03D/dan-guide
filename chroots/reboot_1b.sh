@@ -85,6 +85,9 @@ echo ""
 echo "Перемещение файлов i3 из DanOS..."
 mv /root/DanOS/i3/* /home/danil/.config/i3
 
+echo "Разрешение \"run_lifepart.sh\" на выполнение"
+chmod +x /home/danil/.config/run_lifepart.sh
+
 echo ""
 
 echo "Установка feh для установки изображения рабочего стола:"
