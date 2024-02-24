@@ -296,7 +296,7 @@ bindcode mod1+44 exec /bin/mouseless --config /home/danil/.config/mouseless/conf
 
 # bindcode mod1+44 exec "keynav \\"loadconfig /home/danil/.keynavrc2, start\\"" 
 
-exec feh --bg-scale ~/.config/i3/i3-background.png
+exec_always feh --bg-scale ~/.config/i3/i3-background.png
 
 exec --no-startup-id dunst -conf /home/danil/.config/dunst/rc.conf
 exec --no-startup-id kdeconnect-cli
