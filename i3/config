@@ -315,6 +315,13 @@ bindcode Mod1+28 exec "sed -i -e '7s/.*/*.bg:           #dac94f/' -e '8s/.*/*.da
 
 bindcode Mod1+29 exec "sed -i -e '7s/.*/*.bg:           #3c1400/' -e '8s/.*/*.darkBg:       #000000/' -e '9s/.*/*.lightBg:      #3c1400/' -e '10s/.*/*.textBg:       #695319/' -e '2s/.*/*.foreground:   #a5a2a2/' -e '3s/.*/*.background:   #090300/' .Xresources && xrdb ~/.Xresources && ~/.config/i3/DarkTheme.sh ; i3-msg reload"
 
-
 # bindcode Mod1+29 exec sed -i -e '7s/.*/*.bg:           #202020/' -e '8s/.*/*.darkBg:       #000000/' -e '9s/.*/*.lightBg:      #686868/' -e '10s/.*/*.textBg:       #ffffff/' .Xresources_
 
+for_window [class="lifepart.pyw"] floating enable
+for_window [class="blinker5.pyw"] floating enable move position 0 0
+for_window [class="blinker45.pyw"] floating enable
+
+no_focus [class="blinker5.pyw"]
+no_focus [class="blinker45.pyw"]
+
+exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && /home/danil/.config/i3/run_lifepart.sh
