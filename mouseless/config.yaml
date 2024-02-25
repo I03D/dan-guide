@@ -45,7 +45,7 @@ layers:
     slash: multi leftalt; slash
     i: esc
     m: leftalt+m
-    t: rightalt+t
+    t: leftalt+t
     y: leftalt+y
     u: multi leftalt+u; layer active
     h: leftalt+h
