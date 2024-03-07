@@ -206,11 +206,11 @@ gap
 
 echo "Установка ungoogled-chromium..."
 git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
+chmod 777 ungoogled-chromium-bin/
 cd ungoogled-chromium-bin
-pacman -U --noconfirm 
 su -c "makepkg -sf" danil
 pacman -U *.pkg* --noconfirm
-cd ..
+cd /home/danil
 
 
 gap
