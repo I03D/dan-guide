@@ -307,9 +307,6 @@ smart_borders on
 hide_edge_borders smart
 default_border pixel 3
 
-exec qutebrowser --nowindow > ~/quteinfo 2>&1
-# & disown & exit
-
 # Возможно стоит объединить lightBg и bg, но это не точно, спать хочу.
 bindcode Mod1+28 exec "sed -i -e '7s/.*/*.bg:           #dac94f/' -e '8s/.*/*.darkBg:       #dcac1e/' -e '9s/.*/*.lightBg:      #dac94f/' -e '10s/.*/*.textBg:       #000000/' -e '2s/.*/*.foreground:   #000000/' -e '3s/.*/*.background:   #ffffdd/' .Xresources && xrdb ~/.Xresources && ~/.config/i3/LightTheme.sh ; i3-msg reload"
 
