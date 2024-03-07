@@ -268,8 +268,6 @@ echo ""
 mv /root/DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
 
-echo ""
-
 mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
 
 echo ""
