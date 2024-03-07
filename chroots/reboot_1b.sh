@@ -119,13 +119,22 @@ echo "Перемещение файлов dynamic-colors из DanOS..."
 echo ""
 
 mv /root/DanOS/dynamic-colors/ /etc/dynamic-colors/
+
+echo "Изменение прав доступа к /etc/dynamic-colors/colorscheme..."
 chmod 006 /etc/dynamic-colors/colorscheme
+
+echo ""
+
 echo "Копирование светлой цветовой схемы в .Xresources..."
 cp /etc/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
+
 echo ""
+
 echo "Загрузка dynamic-colors..."
 git clone https://github.com/hellricer/dynamic-colors.git
+
 echo ""
+
 echo "Скрытие папки добавлением точки в название..."
 
 echo ""
@@ -138,7 +147,9 @@ echo ""
 
 echo "Изменение прав доступа к светлой цветовой схеме для i3..."
 chmod 555 /home/danil/.config/i3/LightTheme.sh
+
 echo ""
+
 echo "Установка gcc, требуемого для dynamic-colors..."
 pacman -S --noconfirm gcc
 
