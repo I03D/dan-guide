@@ -29,9 +29,9 @@ usermod -aG wheel,audio,video,storage $username
 
 echo ""
 
-echo "Выполните следующие команды:"
+echo "Выполните следующие действия:"
 echo "1. EDITOR=nvim visudo"
-echo "2. Откомментировать строку \"%wheel all=(all:all) all\""
+echo "2. Откомментируйте строку \"%wheel all=(all:all) all\""
 read
 
 echo "Установка mesa..."
