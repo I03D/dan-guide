@@ -321,4 +321,5 @@ for_window [class="blinker45.pyw"] floating enable
 no_focus [class="blinker5.pyw"]
 no_focus [class="blinker45.pyw"]
 
-exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && /home/danil/.config/i3/run_lifepart.sh
+# exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && /home/danil/.config/i3/run_lifepart.sh
+exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && python /home/danil/lifepart_pyqt5-realization/lifepart.pyw
