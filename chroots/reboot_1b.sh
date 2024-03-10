@@ -71,7 +71,18 @@ pacman -S --noconfirm i3
 
 echo ""
 
-echo "Установка виртуального терминала Xterm..." # Vsyo verno?
+echo "Установка LifePart...
+cd /bin/
+git clone https://github.com/i03d/lifepart_pyqt5-realization
+cd ~
+echo ""
+
+echo "Установка python-pyqt5, необходимого для LifePart..."
+pacman -S --noconfirm python-pyqt5
+
+echo ""
+
+echo "Установка виртуального терминала Xterm..."
 pacman -S --noconfirm xterm
 
 echo ""
@@ -278,7 +289,7 @@ echo "Копирование скрипта в папку i3..."
 cp Browstarter/Browstarter.py /home/danil/.config/i3/
 echo "Изменение прав доступа к скрипту..."
 chmod 777 .config/i3/Browstarter.py
-echo "Установка python, требуемого для Browstarter..."
+echo "Установка python, необходимого для Browstarter..."
 pacman -S --noconfirm python
 
 
