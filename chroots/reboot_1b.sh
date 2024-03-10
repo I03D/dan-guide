@@ -8,7 +8,7 @@ gap() {
     echo "-----------------------------------------------"
 }
 
-echo "Добавление xrandr+feh в /etc/skel/.bashrc..."
+echo "Добавление xrandr, feh и chromium в /etc/skel/.bashrc..."
 cd /etc/skel/
 echo "" > .bashrc
 echo "xrandr() {" > .bashrc
@@ -260,6 +260,10 @@ echo "Установка ungoogled-chromium..."
 # cd /home/danil
 
 flatpak install -y --noninteractive com.github.Eloston.UngoogledChromium
+
+echo "Добавление \"chromium\" в /bin/ и /usr/local/bin/..."
+sudo ln /var/lib/flatpak/exports/share/applications/com.github.Eloston.UngoogledChromium.desktop /bin/chromium
+sudo ln /var/lib/flatpak/exports/share/applications/com.github.Eloston.UngoogledChromium.desktop /usr/local/bin/chromium
 
 
 gap
