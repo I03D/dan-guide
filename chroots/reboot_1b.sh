@@ -8,6 +8,16 @@ gap() {
     echo "-----------------------------------------------"
 }
 
+echo "Добавление xrandr+feh в /etc/skel/.bashrc..."
+cd /etc/skel/
+echo "" > .bashrc
+echo "xrandr() {" > .bashrc
+echo "    xrandr \"\$@\"" > .bashrc
+echo "    feh --bg-scale ~/.config/i3/i3-background.png" > .bashrc
+echo "}" > .bashrc
+echo "" > .bashrc
+cd ~
+
 echo "Введите имя нового пользователя с правами sudo:"
 read -e username
 useradd -m $username
