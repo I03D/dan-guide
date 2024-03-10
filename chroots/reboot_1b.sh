@@ -87,6 +87,7 @@ pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu
 git clone https://aur.archlinux.org/python-pystray
 cd python-pystray
 su -c "makepkg -sf" danil
+pacman -U *.pkg*
 cd ~/
 
 
