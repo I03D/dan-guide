@@ -16,6 +16,8 @@ echo "    xrandr \"\$@\"" > .bashrc
 echo "    feh --bg-scale ~/.config/i3/i3-background.png" > .bashrc
 echo "}" > .bashrc
 echo "" > .bashrc
+echo "alias chromium="flatpak run com.github.Eloston.UngoogledChromium"
+echo "" > .bashrc
 cd ~
 
 echo "Введите имя нового пользователя с правами sudo:"
