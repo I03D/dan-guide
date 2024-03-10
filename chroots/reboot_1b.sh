@@ -24,13 +24,18 @@ pacman -S --noconfirm sudo
 
 echo ""
 
+echo "Установка vim..."
+pacman -S --noconfirm vim
+
+echo ""
+
 echo "Добавление пользователя в нужные группы..."
 usermod -aG wheel,audio,video,storage $username
 
 echo ""
 
 echo "Выполните следующие действия:"
-echo "1. EDITOR=nvim visudo"
+echo "1. EDITOR=vim visudo"
 echo "2. Откомментируйте строку \"%wheel all=(all:all) all\""
 read
 
