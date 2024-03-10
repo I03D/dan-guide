@@ -242,7 +242,7 @@ then
     cp /root/DanOS/nvim/ /home/danil/.config/nvim -r
     cp /root/DanOS/nvim /root/.config/nvim -r
     echo ""
-    echo "Копирование конфигурации NeoVim в root и danil..."
+    echo "Копирование конфигурации lf в root и danil..."
     cp /root/DanOS/lf /home/danil/.config/lf/ -r
     cp /root/DanOS/lf /root/.config/lf/ -r
 fi
