@@ -225,7 +225,7 @@ echo "Установка ungoogled-chromium..."
 # pacman -U *.pkg* --noconfirm
 # cd /home/danil
 
-flatpak install flathub
+flatpak install -y --noninteractive com.github.Eloston.UngoogledChromium
 
 
 gap
