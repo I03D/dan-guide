@@ -204,13 +204,23 @@ cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 gap
 
 
+echo "Установка и настройка flatpak..."
+pacman -S --noconfirm flatpak
+flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+gap
+
+
 echo "Установка ungoogled-chromium..."
-git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
-chmod 777 ungoogled-chromium-bin/
-cd ungoogled-chromium-bin
-su -c "makepkg -sf" danil
-pacman -U *.pkg* --noconfirm
-cd /home/danil
+# git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
+# chmod 777 ungoogled-chromium-bin/
+# cd ungoogled-chromium-bin
+# su -c "makepkg -sf" danil
+# pacman -U *.pkg* --noconfirm
+# cd /home/danil
+
+flatpak install flathub
 
 
 gap
