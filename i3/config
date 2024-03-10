@@ -322,4 +322,4 @@ no_focus [class="blinker5.pyw"]
 no_focus [class="blinker45.pyw"]
 
 # exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && /home/danil/.config/i3/run_lifepart.sh
-exec /home/danil/.config/i3/run_lifepart.sh & sleep 5 && killall python && python /home/danil/lifepart_pyqt5-realization/lifepart.pyw
+exec python /bin/lifepart_pyqt5-realization/lifepart.pyw & sleep 5 && killall python && python python /bin/lifepart_pyqt5-realization/lifepart.pyw
