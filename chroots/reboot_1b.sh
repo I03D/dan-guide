@@ -8,15 +8,13 @@ gap() {
     echo "-----------------------------------------------"
 }
 
-echo "Добавление xrandr, feh и chromium в /etc/skel/.bashrc..."
+echo "Добавление xrandr+feh в /etc/skel/.bashrc..."
 cd /etc/skel/
 echo "" > .bashrc
 echo "xrandr() {" > .bashrc
 echo "    xrandr \"\$@\"" > .bashrc
 echo "    feh --bg-scale ~/.config/i3/i3-background.png" > .bashrc
 echo "}" > .bashrc
-echo "" > .bashrc
-echo "alias chromium="flatpak run com.github.Eloston.UngoogledChromium"
 echo "" > .bashrc
 cd ~
 
