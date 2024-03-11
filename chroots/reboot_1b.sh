@@ -260,6 +260,8 @@ gap
 
 flatpak install -y --noninteractive com.github.Eloston.UngoogledChromium
 
+echo ""
+
 echo "Копирование замены бинарного \"chromium\" в /usr/local/bin/ для адекватного запуска с аргументами в терминале..."
 cp /root/DanOS/chromium /usr/local/bin/chromium
 
