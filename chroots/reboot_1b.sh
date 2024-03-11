@@ -103,7 +103,7 @@ git clone https://aur.archlinux.org/python-pystray
 chown danil python-pystray
 cd python-pystray
 su -c "makepkg -sf" danil
-pacman -U *.pkg*
+pacman -U *.pkg* --noconfirm
 cd ~/
 
 
