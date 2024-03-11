@@ -91,6 +91,12 @@ pacman -S --noconfirm python-pyqt5
 
 echo ""
 
+echo "cd /home/danil/"
+cd /home/danil
+
+echo ""
+
+
 echo "Установка python-pystray, необходимого для LifePart..."
 pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu-gtk3 libgirepository libimagequant libraqm openjpeg2 python-packaging libappindicator-gtk3 python-gobject python-pillow python-six python-xlib
 git clone https://aur.archlinux.org/python-pystray
