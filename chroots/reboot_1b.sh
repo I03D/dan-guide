@@ -105,7 +105,7 @@ pacman -S --noconfirm pulseaudio
 
 echo ""
 
-echo "Установка git..." # Nujen li?
+echo "Установка git..."
 pacman -S --noconfirm git
 # git clone https://github.com/i03d/DanOS.git
 
