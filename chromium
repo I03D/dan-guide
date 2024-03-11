@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /var/lib/flatpak/app
+./com.github.Eloston.UngoogledChromium "$@"
