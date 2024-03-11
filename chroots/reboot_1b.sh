@@ -18,6 +18,8 @@ echo "}" > .bashrc
 echo "" > .bashrc
 cd ~
 
+echo ""
+
 echo "Введите имя нового пользователя с правами sudo:"
 read -e username
 useradd -m $username
