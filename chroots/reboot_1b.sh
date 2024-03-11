@@ -100,6 +100,7 @@ echo ""
 echo "Установка python-pystray, необходимого для LifePart..."
 pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu-gtk3 libgirepository libimagequant libraqm openjpeg2 python-packaging libappindicator-gtk3 python-gobject python-pillow python-six python-xlib
 git clone https://aur.archlinux.org/python-pystray
+chown danil python-pystray
 cd python-pystray
 su -c "makepkg -sf" danil
 pacman -U *.pkg*
@@ -256,14 +257,6 @@ flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo --if-
 
 gap
 
-
-echo "Установка ungoogled-chromium..."
-# git clone https://aur.archlinux.org/ungoogled-chromium-bin.git
-# chmod 777 ungoogled-chromium-bin/
-# cd ungoogled-chromium-bin
-# su -c "makepkg -sf" danil
-# pacman -U *.pkg* --noconfirm
-# cd /home/danil
 
 flatpak install -y --noninteractive com.github.Eloston.UngoogledChromium
 
