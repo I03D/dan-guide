@@ -47,6 +47,8 @@ echo ""
 echo "Выполните следующие действия:"
 echo "1. EDITOR=vim visudo"
 echo "2. Откомментируйте строку \"%wheel all=(all:all) all\""
+echo ""
+echo "(Автоматизирую, когда вспомню регулярные выражения.)"
 read
 
 echo "Установка mesa..."
