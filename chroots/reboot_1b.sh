@@ -34,6 +34,11 @@ pacman -S --noconfirm sudo
 
 echo ""
 
+echo "Установка git..."
+pacman -S --noconfirm git
+
+echo ""
+
 echo "Установка vim..."
 pacman -S --noconfirm vim
 
@@ -105,8 +110,6 @@ pacman -S --noconfirm pulseaudio
 
 echo ""
 
-echo "Установка git..."
-pacman -S --noconfirm git
 # git clone https://github.com/i03d/DanOS.git
 
 echo ""
