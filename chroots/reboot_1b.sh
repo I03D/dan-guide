@@ -73,7 +73,7 @@ pacman -S --noconfirm i3
 
 echo ""
 
-echo "Установка LifePart...
+echo "Установка LifePart..."
 cd /bin/
 git clone https://github.com/i03d/lifepart_pyqt5-realization
 cd ~
