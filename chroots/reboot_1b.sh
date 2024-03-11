@@ -250,7 +250,7 @@ gap
 
 echo "Установка и настройка flatpak..."
 pacman -S --noconfirm flatpak
-flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo --if-not-exists
 
 
 gap
