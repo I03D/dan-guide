@@ -10,12 +10,12 @@ gap() {
 
 echo "Добавление xrandr+feh в /etc/skel/.bashrc..."
 cd /etc/skel/
-echo "" > .bashrc
-echo "xrandr() {" > .bashrc
-echo "    /bin/xrandr \"\$@\"" > .bashrc
-echo "    feh --bg-scale ~/.config/i3/i3-background.png" > .bashrc
-echo "}" > .bashrc
-echo "" > .bashrc
+echo "" >> .bashrc
+echo "xrandr() {" >> .bashrc
+echo "    /bin/xrandr \"\$@\"" >> .bashrc
+echo "    feh --bg-scale ~/.config/i3/i3-background.png" >> .bashrc
+echo "}" >> .bashrc
+echo "" >> .bashrc
 cd ~
 
 echo ""
