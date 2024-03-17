@@ -276,6 +276,12 @@ echo "Перемещение расширения \"Vimium C\" в папку р�
 mkdir /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/ -p
 mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
 
+echo ""
+
+echo "Перемещение конфигурации \"Vimium C\" в папку конфигураций..."
+mkdir /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/ -p
+mv /root/DanOS/chromium/000003.log /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
+
 
 gap
 
