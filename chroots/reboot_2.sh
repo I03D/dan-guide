@@ -31,8 +31,12 @@ echo "xrandr --output Virtual-1 --mode 1280x720"
 
 echo ""
 
-echo "Добавьте запуск xrandr в ~/.config/i3/config любым редактором кода: nvim, nano и т. д."
+echo "Добавьте получившееся в ~/.config/i3/config любым редактором кода: nvim, nano и т. д."
 echo "Открывать с правами администратора, напр.: sudo nvim ~/.config/i3/config."
+
+echo ""
+
+echo "Приписать exec, напр.: exec xrandr --output Virtual-1 --mode 1280x720
 
 echo ""
 
