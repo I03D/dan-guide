@@ -14,8 +14,6 @@ echo "[Нажмите Enter, когда удостоверитесь, что mou
 read
 clear
 
-echo ""
-
 nohup xterm &
 
 echo "Установите разрешение экрана монитора:"
