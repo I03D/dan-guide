@@ -1,3 +1,7 @@
+echo "Если фокус на окне LifePart (обведено чёрным), то закройте её, - alt+k.
+
+echo ""
+
 echo "Тестирование mouseless:"
 echo "Проведите тест mouseless, нажав, например, alt+,"
 echo ""
