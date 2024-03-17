@@ -29,7 +29,7 @@ echo "xrandr --listmonitors"
 echo ""
 
 echo "Пример 720p-разрешения:"
-echo "xrandr --output Virtual-1 --mode 1280x720
+echo "xrandr --output Virtual-1 --mode 1280x720"
 
 echo ""
 
