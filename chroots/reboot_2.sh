@@ -12,7 +12,6 @@ echo ""
 
 echo "[Нажмите Enter, когда удостоверитесь, что mouseless работает]."
 read
-
 clear
 
 echo ""
@@ -41,8 +40,12 @@ echo "echo \"xrandr --output Virtual-1 --mode 1280x720\" >> ~/.config/i3/config"
 echo ""
 
 echo "[По завершении настроек нажмите Enter для продолжения. Переключение фокуса между окнами осуществляется с помощью super+j / super+;.]"
+read
+clear
 
 echo "exec python /bin/lifepart_pyqt5-realization/lifepart.pyw & sleep 10 && killall python && python /bin/lifepart_pyqt5-realization/lifepart.pyw" >> /home/danil/.config/i3/config
 
 echo "LifePart добавлен в автозапуск. Можете запустить его самостоятельно, либо снова выполнить перезагрузку."
+echo "[Установка завершена, закройте все окна. Для закрытия окон используется alt+k.]"
 read
+clear
