@@ -44,9 +44,6 @@ echo "[По завершении настроек нажмите Enter для п
 read
 clear
 
-echo "exec python /bin/lifepart_pyqt5-realization/lifepart.pyw & sleep 10 && killall python && python /bin/lifepart_pyqt5-realization/lifepart.pyw" >> /home/danil/.config/i3/config
-
-echo "LifePart добавлен в автозапуск. Можете запустить его самостоятельно, либо снова выполнить перезагрузку."
 echo "[Установка завершена, закройте все окна. Для закрытия окон используется alt+k.]"
 read
 clear
