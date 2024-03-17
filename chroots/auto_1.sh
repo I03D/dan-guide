@@ -1,9 +1,11 @@
 #!/bin/bash
 
 echo ""
+
 echo "Войти в систему специальным chroot'ом от arch:"
 echo "arch-chroot /mnt"
 read
+
 echo "Подобрать часовой пояс (с помощью tab), например: ln -sf /usr/share/zoneinfo/Europe/Moscow"
 read
 
