@@ -17,6 +17,8 @@ clear
 
 echo ""
 
+xterm
+
 echo "Установите разрешение экрана монитора:
 echo "xrandr --output МОНИТОР --mode РАЗРЕШЕНИЕ
 
@@ -38,6 +40,9 @@ echo "echo \"xrandr --output Virtual-1 --mode 1280x720\" >> ~/.config/i3/config"
 
 echo ""
 
-echo "[Нажмите Enter для завершения установки.]"
+echo "[По завершении настроек нажмите Enter для продолжения. Переключение фокуса между окнами осуществляется с помощью super+j / super+;.]"
 
+echo "exec python /bin/lifepart_pyqt5-realization/lifepart.pyw & sleep 10 && killall python && python /bin/lifepart_pyqt5-realization/lifepart.pyw" >> /home/danil/.config/i3/config
+
+echo "LifePart добавлен в автозапуск. Можете запустить его самостоятельно, либо снова выполнить перезагрузку."
 read
