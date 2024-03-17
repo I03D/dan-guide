@@ -18,8 +18,8 @@ echo ""
 
 nohup xterm &
 
-echo "Установите разрешение экрана монитора:
-echo "xrandr --output МОНИТОР --mode РАЗРЕШЕНИЕ
+echo "Установите разрешение экрана монитора:"
+echo "xrandr --output МОНИТОР --mode РАЗРЕШЕНИЕ"
 
 echo ""
 
