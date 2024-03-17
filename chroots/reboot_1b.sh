@@ -273,7 +273,7 @@ sudo chmod +x /usr/local/bin/chromium
 echo ""
 
 echo "Перемещение расширения \"Vimium C\" в папку расширений..."
-mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ -r /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
+mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
 
 
 gap
