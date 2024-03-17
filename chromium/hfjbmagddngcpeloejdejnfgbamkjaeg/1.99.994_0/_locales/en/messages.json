@@ -1,0 +1,416 @@
+{
+   "0": {
+      "message": "Open link in current tab"
+   },
+   "1": {
+      "message": "$1"
+   },
+   "10": {
+      "message": "No links to go $1"
+   },
+   "100": {
+      "message": "^void\\s*\\( ?0 ?\\)\\s*;?$$|^;?$$"
+   },
+   "101": {
+      "message": "^http://(?!localhost[:/])"
+   },
+   "102": {
+      "message": "^(new\\.|www\\.|)reddit\\.com$$###overlayScrollContainer;^twitter\\.com$$##div.permalink-container div.permalink[role=main];^web\\.telegram\\.org$$##.MessageList"
+   },
+   "103": {
+      "message": "(^|-)(button|a$$)"
+   },
+   "104": {
+      "message": "\\b(?:[Cc]lose)(?:$$|[-\\sA-Z_])"
+   },
+   "105": {
+      "message": "(-ms-high-contrast:active)"
+   },
+   "106": {
+      "message": "script,style,title,textarea"
+   },
+   "107": {
+      "message": "\\.(?:avif|bmp|gif|icon?|jpe?g|a?png|svg|tiff?|webp)\\b"
+   },
+   "108": {
+      "message": "\\bgoogle##.g;\\bbing\\.com##.b_algo;\\bbaidu\\.##.c-container;\\bmail.ru\\b##.SnippetResultInfo-favicon"
+   },
+   "109": {
+      "message": "\\btwitter\\.com##[href$$=\\/trends],[data-testid=app-bar-back]"
+   },
+   "11": {
+      "message": "Nothing was focused"
+   },
+   "110": {
+      "message": "beforecopy beforecut beforeinput compositionend compositionstart compositionupdate contextmenu copy cut keypress mouseup paste selectionchange selectstart wheel textInput "
+   },
+   "111": {
+      "message": "Vimium C uses the built-in Vomnibar page because the preferred is too old."
+   },
+   "112": {
+      "message": "Some functions of Vimium C may not work because %o is sandboxed at %o."
+   },
+   "113": {
+      "message": "Vimium C blocks auto-focusing on %s at %o."
+   },
+   "114": {
+      "message": "prev"
+   },
+   "115": {
+      "message": "next"
+   },
+   "12": {
+      "message": "The last focused is hidden"
+   },
+   "13": {
+      "message": "There are no inputs to focus on"
+   },
+   "14": {
+      "message": "No URL found!"
+   },
+   "15": {
+      "message": "No text found!"
+   },
+   "16": {
+      "message": "Open multiple links in current tab"
+   },
+   "17": {
+      "message": "A child frame just got replaced"
+   },
+   "18": {
+      "message": "Open multiple links in new tabs"
+   },
+   "19": {
+      "message": "Activate link and hold on"
+   },
+   "2": {
+      "message": "Open link in new tab"
+   },
+   "20": {
+      "message": "Copied: $1"
+   },
+   "200": {
+      "message": "http://www.w3.org/1999/xhtml"
+   },
+   "21": {
+      "message": "Sorry, Vomnibar page seems to fail to load"
+   },
+   "22": {
+      "message": "Too many links to select"
+   },
+   "23": {
+      "message": "Search has arrived at the $1"
+   },
+   "24": {
+      "message": "start"
+   },
+   "25": {
+      "message": "end"
+   },
+   "26": {
+      "message": "($1 matches)"
+   },
+   "27": {
+      "message": "(1 match)"
+   },
+   "28": {
+      "message": "(Some matches)"
+   },
+   "29": {
+      "message": "(No matches)"
+   },
+   "3": {
+      "message": "Open link in new active tab"
+   },
+   "30": {
+      "message": " (modal UI)"
+   },
+   "31": {
+      "message": "Please type: $1"
+   },
+   "32": {
+      "message": "Hover over node"
+   },
+   "33": {
+      "message": "Simulate mouse leaving link"
+   },
+   "34": {
+      "message": "Focus node"
+   },
+   "35": {
+      "message": "Download media"
+   },
+   "36": {
+      "message": "Copy image to Clipboard"
+   },
+   "37": {
+      "message": "Open image"
+   },
+   "38": {
+      "message": "Search selected text"
+   },
+   "39": {
+      "message": "Sorry, Vimium C cannot open a HUD on this page"
+   },
+   "4": {
+      "message": "The last element is unhovered"
+   },
+   "40": {
+      "message": "Copy link text to Clipboard"
+   },
+   "41": {
+      "message": "No old queries to find"
+   },
+   "42": {
+      "message": "Copy link URL to Clipboard"
+   },
+   "43": {
+      "message": "Selected line boundary"
+   },
+   "44": {
+      "message": "Download link"
+   },
+   "45": {
+      "message": "Open link in incognito window"
+   },
+   "46": {
+      "message": "Open URL directly"
+   },
+   "47": {
+      "message": "Re-downloading…"
+   },
+   "48": {
+      "message": "Hover over nodes continuously"
+   },
+   "49": {
+      "message": "Simulate mouse leaving continuously"
+   },
+   "5": {
+      "message": "No matching targets found"
+   },
+   "50": {
+      "message": "Focus nodes continuously"
+   },
+   "51": {
+      "message": "Download multiple media"
+   },
+   "52": {
+      "message": "Copy multiple images"
+   },
+   "53": {
+      "message": "Open multiple images"
+   },
+   "54": {
+      "message": "Search link text one by one"
+   },
+   "55": {
+      "message": "Create a selection before entering visual mode"
+   },
+   "56": {
+      "message": "Copy link text one by one"
+   },
+   "57": {
+      "message": "Copy link text list"
+   },
+   "58": {
+      "message": "Copy link URL one by one"
+   },
+   "59": {
+      "message": "Copy link URL list"
+   },
+   "6": {
+      "message": "No pass keys"
+   },
+   "60": {
+      "message": "Download multiple links"
+   },
+   "61": {
+      "message": "Open multiple incognito tabs"
+   },
+   "62": {
+      "message": "Open multiple URLs directly"
+   },
+   "63": {
+      "message": "Hit \u003CEnter> to proceed…"
+   },
+   "64": {
+      "message": "Edit link URL on Vomnibar"
+   },
+   "65": {
+      "message": "Edit link text on Vomnibar"
+   },
+   "66": {
+      "message": "Select text and enter visual mode"
+   },
+   "67": {
+      "message": "Select an editable area"
+   },
+   "68": {
+      "message": "Visual"
+   },
+   "69": {
+      "message": "Line"
+   },
+   "7": {
+      "message": "Normal mode (pass keys disabled)$1"
+   },
+   "70": {
+      "message": "Caret"
+   },
+   "71": {
+      "message": "No links to select"
+   },
+   "72": {
+      "message": "LinkHints exits because you're typing"
+   },
+   "73": {
+      "message": "The link has been removed from the page"
+   },
+   "74": {
+      "message": "Not an image"
+   },
+   "75": {
+      "message": "Hover to scroll"
+   },
+   "76": {
+      "message": "Sorry, Vimium C won't copy any password"
+   },
+   "77": {
+      "message": "Nothing new to copy"
+   },
+   "78": {
+      "message": "Download: $1"
+   },
+   "79": {
+      "message": "(Paused)"
+   },
+   "8": {
+      "message": ": $1 times"
+   },
+   "80": {
+      "message": "To trigger key: $1"
+   },
+   "81": {
+      "message": "No matches for \"$1\""
+   },
+   "82": {
+      "message": "$1 mode"
+   },
+   "83": {
+      "message": "No usable selection, entering caret mode…"
+   },
+   "84": {
+      "message": "Selection has been lost"
+   },
+   "85": {
+      "message": ":is(a,area,link)[rel~=$1 i]"
+   },
+   "86": {
+      "message": "(forced-colors:active)"
+   },
+   "87": {
+      "message": "input,textarea,[contenteditable]"
+   },
+   "88": {
+      "message": "document.currentScript.remove()"
+   },
+   "89": {
+      "message": ""
+   },
+   "9": {
+      "message": "Pass next keys$1"
+   },
+   "90": {
+      "message": "a,button,input,frame,iframe"
+   },
+   "91": {
+      "message": "^url\\(\\s?['\"]?((?:\\\\['\"]|[^'\"])+?)['\"]?\\s?\\)"
+   },
+   "92": {
+      "message": "(?:(?\u003C=\\b|_)(?:b(?:utto|t)n|close|hate|like)|B(?:utto|t)n|Close)(?=$$|[-\\sA-Z_])"
+   },
+   "93": {
+      "message": "(?:(?:\\b|_)(?:b(?:utto|t)n|close|hate|like)|B(?:utto|t)n|Close)(?=$$|[-\\sA-Z_])"
+   },
+   "94": {
+      "message": "^(?:button|checkbox|link|radio|tab)$$|^menuitem"
+   },
+   "95": {
+      "message": "^[^\\w\\x80-\\uffff]+|[^!-~À-üЂ-џºء-ي]+"
+   },
+   "96": {
+      "message": "[^0-9a-z_ß-üа-џºء-ي]+"
+   },
+   "97": {
+      "message": "\\b(device-width|initial-scale)\\b"
+   },
+   "98": {
+      "message": "0\\.01|/\\*!DPI\\*/[\\d.]+"
+   },
+   "99": {
+      "message": ":scope>:not(link):not(style)"
+   },
+   "999": {
+      "message": "'use strict';(function(){var ma,mt,vs,I,V=function (n){I='__VimiumC_'===n},d=document,sp=Object.setPrototypeOf,K='addEventListener',H='toString',k='prototype',kt='getElementsByTagName',F=EventTarget[k],l=F[K],R=[],C=l.call,a='object'==typeof Reflect?Reflect.apply:C.bind(C.apply),c=C.bind(C),_d=F.dispatchEvent,X=Element,e=X[k],b=e.appendChild,ga=e.getAttribute,ha=e.hasAttribute,S=e.remove,eb=e[kt],n=[],U=n.slice,J=C.bind(n.indexOf),fe=n.forEach,Sp=n.splice,p=n.push.bind(n),f=CustomEvent,sP=f[k].stopImmediatePropagation,de=FocusEvent,Y=Function[k],s=Y[H],li=C.bind(l),z=clearTimeout,D=Document[k],ge=D[kt],Q=D.open,y=D.write,ko='VimiumCClickable',O=ko+2758874,M='function',v=O.substr,Z=(n)=>{n&&n(c(v,c(s,n),16,18))},h={toString(){var n=this,e=arguments,i=a(s,n===dw?y:n===md?Q:n,e),f=i!==(ma||(mt=c(s,w),vs=c(v,c(s,V),0,26),ma=c(s,m)));return 2===e.length&&'__VimiumC_'===e[0]&&Z(e[1]),E&&i===E&&_(),f&&i!==mt?40!==i.length||c(v,i,0,26)!==vs?i:c(s,N):n===w||n===m||(I=0,f?c(n,N,L,V):n(L,N,0,V),I)?c(s,f?s:l):i},addEventListener(n,e){var i=this,f=arguments,r=4===f.length&&'__VimiumC_'===n?Z(f[3]):a(l,i,f);return('click'===n||'mousedown'===n||'dblclick'===n?e&&i instanceof X&&'a'!==i.localName&&i!==R[R.length-1]:n===O&&!j&&i&&!i.window&&1===i.nodeType)&&(P(i),t=t||(q(dt),1)),r},open(){return B(0,this,arguments)},write(){return B(1,this,arguments)}},m=h[K],w=h[H],md=h.open,dw=h.write,r=d.currentScript,t=1,x=r.dataset.vimium,L='__VimiumC_',E=L+'=>'+x,g=e.getRootNode,cO=g?null:e.contains.bind(d),kc={__proto__:null,composed:!0},T=setTimeout,sc=r.children,u=0,i=null,A=null,P=n.push.bind(R),q=window.queueMicrotask,j=0,dt=()=>{t=T(o,666)},o=()=>{var n=R.length,e=n>512?n-512:0;t=e&&T(o,36),n&&(c(S,r),u=0,a(fe,a(Sp,R,[e,n-e]),[pr]),G(0))},W=(n,e,i)=>{a(_d,i||r,[new n(ko,sp(e,null))])},pr=(n)=>{var e,l,a,s,v,m,h;if(g?g(n)===d:cO(n))p(J(i=i||c(U,c(ge,d,'*')),n));else if((e=n.ownerDocument)===d){if(g)l=g(n);else{for(s='value',v=n;l=v.parentNode,a=v.parentElement;v=a)if(a!==l&&s in a){if(!l||1!==l.nodeType)break;if(s in l)return;a=l}l=l||v}1===(m=l.nodeType)?(l!==r&&c(b,r,l),p(-8-J(A=A||c(U,c(eb,r,'*')),n))):11!==m||(u\u003C10?(a=l.host)?!(l=g&&a.shadowRoot&&g(n,kc))||l!==d&&1!==l.nodeType||'string'!=typeof(h=n.tagName)||(l!==d&&l!==r&&c(b,r,l),u++,W(f,{detail:+x%1e4+h,composed:!0},n)):(u++,W(de,{relatedTarget:n})):(P(n),u\u003C13&&(u=13,z(t),t=T(o,1))))}else e.top!==top&&9===e.nodeType&&e.defaultView&&sr(n,e)},G=(e)=>{n.length&&(u++,W(f,{detail:[n,e]}),n.length=0),i=A=null},sr=(n,e)=>{var i=e[K],f=e.removeEventListener;if(typeof i==M&&typeof f==M&&i!==m){j=1;try{c(i,n,O,N)}catch(n){}try{c(f,n,O,N)}catch(n){}j=0}},_=(n)=>{var e=n&&r&&+c(ga,r,'data-vimium'),i=e?e>>3==+x?7&e:0:n?0:6;e&&c(sP,n),i\u003C4?i&&(i>2?o(z(t)):co(i)):(r=R.length=E=0,P=T=N,t=1)},co=(n)=>{var e,f,t=(c(S,r),i=c(U,c(ge,d,'*'))).length,l=u=0;for(t=t\u003C5e3||n>1?t:0;l\u003Ct;l++)!(f=i[l]).onclick&&!f.onmousedown||a(ha,f,['onclick'])||'a'===(e=f.localName)||'button'===e||p(l);G(1)},B=(n,e,i)=>{var f=d.readyState\u003C'l'&&(n||i.length\u003C3)&&e===d,u=a(n?y:Q,e,i);return f&&r&&G(0,p(-3)),u},N=()=>{return 1};typeof q!==M&&(q=(q=Promise.resolve()).then.bind(q)),g&&(g=C.bind(g)),c(S,r),c(l,r,L+2758874,()=>{c(S,r=sc[0]),li(r,'VC',_,!0),t=R.length>0?T(o,36):0,E=0,sc=null}),r=0,F[K]=m,Y[H]=w,D.open=md,D.write=dw})()"
+   },
+   "Close": {
+      "message": ""
+   },
+   "Go": {
+      "message": ""
+   },
+   "Search": {
+      "message": ""
+   },
+   "Toggle_Dark": {
+      "message": ""
+   },
+   "createTab_s": {
+      "message": "Create new tab"
+   },
+   "description": {
+      "message": "A keyboard shortcut tool for keyboard-based page navigation and browser tab operations with an advanced omnibar and global shortcuts"
+   },
+   "goBack_s": {
+      "message": "Go back in history"
+   },
+   "goForward_s": {
+      "message": "Go forward in history"
+   },
+   "i18n": {
+      "message": ""
+   },
+   "i18nAll": {
+      "message": "zh fr"
+   },
+   "lang1": {
+      "message": ""
+   },
+   "name": {
+      "message": "Vimium C - All by Keyboard"
+   },
+   "noActiveState": {
+      "message": "As configured, here's no active state"
+   },
+   "previousTab_s": {
+      "message": "Go one tab left"
+   },
+   "quickNext_s": {
+      "message": "Go one tab right"
+   },
+   "reloadTab_s": {
+      "message": "Reload tab"
+   },
+   "userCustomized": {
+      "message": "Custom shortcut"
+   },
+   "vblank": {
+      "message": ""
+   },
+   "voptions": {
+      "message": ""
+   },
+   "vshow": {
+      "message": ""
+   }
+}
