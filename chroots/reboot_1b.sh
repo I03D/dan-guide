@@ -52,7 +52,9 @@ usermod -aG wheel,audio,video,storage $username
 echo ""
 
 echo "Выполните следующие действия:"
-echo "1. EDITOR=vim visudo"
+echo "1. EDITOR=vim visudo # Если не умеете пользоваться vim, скачайте nano:"
+echo "    # pacman -Sy nano"
+echo "    # EDITOR=nano visudo"
 echo "2. Откомментируйте строку \"%wheel all=(all:all) all\""
 echo ""
 echo "(Автоматизирую, когда вспомню регулярные выражения.)"
