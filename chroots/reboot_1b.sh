@@ -108,7 +108,6 @@ su -c "makepkg -sf" danil
 pacman -U *.pkg* --noconfirm
 cd ~/
 
-
 echo ""
 
 echo "Установка виртуального терминала Xterm..."
