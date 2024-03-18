@@ -68,7 +68,9 @@ pacman -S --noconfirm pacman-contrib
 echo ""
 
 echo "Сортировка зеркал в mirrorlist по скорости..."
-rankmirrors /etc/pacman.d/mirrorlist >> /etc/pacman.d/mirrorlist
+rankmirrors /etc/pacman.d/mirrorlist >> newmirrorlist
+rm /etc/pacman.d/mirrorlist
+mv newmirrorlist /etc/pacman.d/mirrorlist
 
 echo ""
 
