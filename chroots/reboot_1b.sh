@@ -395,13 +395,9 @@ echo "Передача /home/danil/.config/ и всего её содержим�
 echo ""
 
 echo "Запись следующего скрипта в i3 для запуска..."
-
-echo ""
-
 echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
 echo ""
-
 echo "Передача следующего скрипта пользователю..."
 
 chown danil /opt/scripts/reboot_2.sh
