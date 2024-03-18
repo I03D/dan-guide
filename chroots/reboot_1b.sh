@@ -396,6 +396,12 @@ echo ""
 
 echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
 
+echo ""
+
+echo "Передача следующего скрипта пользователю..."
+
+chown danil /opt/scripts/reboot_2.sh
+
 
 echo "(Не забывайте загружать свою ОС, а не установщик, если он ещё присутствует.)"
 echo ""
