@@ -350,7 +350,7 @@ echo "Перемещение конфигурации из DanOS в систем
 echo ""
 
 # mv /root/DanOS/mouseless/ /home/$name/.config/mouseless
-mv /root/DanOS/mouseless/config.yaml /home/$name/.config/mouseless/config.yaml
+mv /root/DanOS/mouseless/config.yaml /root/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
 
 mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
