@@ -47,7 +47,7 @@ pacman -S --noconfirm vim
 echo ""
 
 echo "Добавление пользователя в нужные группы..."
-usermod -aG wheel,audio,video,storage $username
+usermod -aG wheel,audio,video,storage $name
 
 echo ""
 
