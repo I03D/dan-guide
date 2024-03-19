@@ -89,6 +89,11 @@ git clone https://github.com/i03d/lifepart_pyqt5-realization
 cd ~
 echo ""
 
+echo "Установка base-devel и cmake для сборки пакетов..."
+pacman -S --noconfirm base-devel cmake
+
+echo ""
+
 echo "Установка python-pyqt5, необходимого для LifePart..."
 pacman -S --noconfirm python-pyqt5
 
@@ -228,12 +233,6 @@ echo ""
 
 echo "cd xkb-switch"
 cd xkb-switch
-
-echo ""
-
-echo "Установка base-devel и cmake для сборки пакета..."
-pacman -S --noconfirm base-devel cmake
-
 
 echo ""
 
