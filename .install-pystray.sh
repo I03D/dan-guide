@@ -1,4 +1,4 @@
 #!/bin/bash
 
-su -c "makepkg -sf" danil
+su -c "makepkg -sf" $name
 pacman -U *.pkg* --noconfirm
