@@ -286,6 +286,13 @@ echo "Перемещение конфигурации \"Vimium C\" в папку
 mkdir /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/ -p
 mv /root/DanOS/chromium/000003.log /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
 
+echo ""
+
+echo "Передача приложения Chromium пользователю $name..."
+chown $name /home/$name/.var/app/com.github.Eloston.UngoogledChromium/ -R
+
+echo ""
+
 
 gap
 
