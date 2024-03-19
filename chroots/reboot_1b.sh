@@ -21,13 +21,13 @@ cd ~
 echo ""
 
 echo "Введите имя нового пользователя с правами sudo:"
-read -e username
-useradd -m $username
+read -e name
+useradd -m $name
 
 echo ""
 
-echo "Установка пароля для $username:"
-passwd $username
+echo "Установка пароля для $name:"
+passwd $name
 
 echo ""
 
@@ -93,15 +93,15 @@ pacman -S --noconfirm python-pyqt5
 
 echo ""
 
-echo "cd /home/danil/"
-cd /home/danil
+echo "cd /home/$name/"
+cd /home/$name
 
 echo ""
 
 echo "Установка python-pystray, необходимого для LifePart..."
 pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu-gtk3 libgirepository libimagequant libraqm openjpeg2 python-packaging libappindicator-gtk3 python-gobject python-pillow python-six python-xlib python-build python-installer python-wheel python-setuptools python-sphinx
 git clone https://aur.archlinux.org/python-pystray
-chown danil python-pystray
+chown $name python-pystray
 sh /root/DanOS/install-pystray.sh
 cd ~/
 
@@ -132,12 +132,12 @@ pacman -S --noconfirm neovim
 echo ""
 
 echo "Создание папки конфигурации i3..."
-mkdir /home/danil/.config/i3 -p
+mkdir /home/$name/.config/i3 -p
 
 echo ""
 
 echo "Перемещение файлов i3 из DanOS..."
-mv /root/DanOS/i3/* /home/danil/.config/i3
+mv /root/DanOS/i3/* /home/$name/.config/i3
 
 echo "Установка feh для установки изображения рабочего стола:"
 pacman -S --noconfirm feh
@@ -145,7 +145,7 @@ pacman -S --noconfirm feh
 echo ""
 
 echo "Изменение прав доступа к изображению рабочего стола для i3..."
-chmod 777 /home/danil/.config/i3/i3-background.png
+chmod 777 /home/$name/.config/i3/i3-background.png
 
 echo ""
 
@@ -155,7 +155,7 @@ pacman -S --noconfirm i3lock
 echo ""
 
 echo "Изменение прав доступа к изображению блокировщика экрана..."
-chmod 777 /home/danil/.config/i3/i3lock-background.png
+chmod 777 /home/$name/.config/i3/i3lock-background.png
 
 
 gap
@@ -175,7 +175,7 @@ chmod 006 /etc/dynamic-colors/colorscheme
 echo ""
 
 echo "Копирование светлой цветовой схемы в .Xresources..."
-cp /etc/dynamic-colors/colorschemes/LightScheme /home/danil/.Xresources
+cp /etc/dynamic-colors/colorschemes/LightScheme /home/$name/.Xresources
 
 echo ""
 
@@ -190,12 +190,12 @@ echo ""
 
 mv dynamic-colors/bin/dynamic-colors /bin/dynamic-colors # Или лучше /usr/bin/?
 echo "Изменение прав доступа к тёмной цветовой схеме для i3..."
-chmod 555 /home/danil/.config/i3/DarkTheme.sh
+chmod 555 /home/$name/.config/i3/DarkTheme.sh
 
 echo ""
 
 echo "Изменение прав доступа к светлой цветовой схеме для i3..."
-chmod 555 /home/danil/.config/i3/LightTheme.sh
+chmod 555 /home/$name/.config/i3/LightTheme.sh
 
 echo ""
 
@@ -210,8 +210,8 @@ echo "Установка и настройка xkb-switch, необходимо�
 
 echo ""
 
-echo "cd /home/danil/"
-cd /home/danil
+echo "cd /home/$name/"
+cd /home/$name
 
 echo ""
 
@@ -235,14 +235,14 @@ pacman -S --noconfirm base-devel cmake
 
 echo ""
 
-echo "Cборка пакета xkb-switch от пользователя danil..."
-su -c "makepkg -sf" danil
+echo "Cборка пакета xkb-switch от пользователя $name..."
+su -c "makepkg -sf" $name
 pacman -U *.pkg* --noconfirm
 
 echo ""
 
-echo "cd /home/danil/"
-cd /home/danil/
+echo "cd /home/$name/"
+cd /home/$name/
 
 echo ""
 
@@ -276,14 +276,14 @@ sudo chmod +x /usr/local/bin/chromium
 echo ""
 
 echo "Перемещение расширения \"Vimium C\" в папку расширений..."
-mkdir /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/ -p
-mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
+mkdir /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/ -p
+mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
 
 echo ""
 
 echo "Перемещение конфигурации \"Vimium C\" в папку конфигураций..."
-mkdir /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/ -p
-mv /root/DanOS/chromium/000003.log /home/danil/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
+mkdir /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/ -p
+mv /root/DanOS/chromium/000003.log /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
 
 
 gap
@@ -296,13 +296,13 @@ read colemak
 echo ""
 if [[ $colemak == "1" ]];
 then
-    echo "Копирование конфигурации NeoVim в root и danil..."
+    echo "Копирование конфигурации NeoVim в root и $name..."
     mkdir /root/.config/
-    cp /root/DanOS/nvim/ /home/danil/.config/nvim -r
+    cp /root/DanOS/nvim/ /home/$name/.config/nvim -r
     cp /root/DanOS/nvim /root/.config/nvim -r
     echo ""
-    echo "Копирование конфигурации lf в root и danil..."
-    cp /root/DanOS/lf /home/danil/.config/lf/ -r
+    echo "Копирование конфигурации lf в root и $name..."
+    cp /root/DanOS/lf /home/$name/.config/lf/ -r
     cp /root/DanOS/lf /root/.config/lf/ -r
 fi
 
@@ -324,7 +324,7 @@ echo "Установка и настройка Browstarter, удобного л�
 echo "Загрузка Browstarter..."
 git clone https://github.com/i03d/Browstarter.git
 echo "Копирование скрипта в папку i3..."
-cp Browstarter/Browstarter.py /home/danil/.config/i3/
+cp Browstarter/Browstarter.py /home/$name/.config/i3/
 echo "Изменение прав доступа к скрипту..."
 chmod 777 .config/i3/Browstarter.py
 echo "Установка python, необходимого для Browstarter..."
@@ -344,13 +344,13 @@ echo "Создание папки конфигурации..."
 
 echo ""
 
-mkdir /home/danil/.config/mouseless/
+mkdir /home/$name/.config/mouseless/
 echo "Перемещение конфигурации из DanOS в систему..."
 
 echo ""
 
-# mv /root/DanOS/mouseless/ /home/danil/.config/mouseless
-mv /root/DanOS/mouseless/config.yaml /home/danil/.config/mouseless/config.yaml
+# mv /root/DanOS/mouseless/ /home/$name/.config/mouseless
+mv /root/DanOS/mouseless/config.yaml /home/$name/.config/mouseless/config.yaml
 echo "Перемещение mouseless в /bin..."
 
 mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
@@ -385,19 +385,19 @@ echo "Разрешение чтения пользователями файла 
 
 echo ""
 
-echo "Передача /home/danil/.config/ и всего её содержимого пользователю..."
+echo "Передача /home/$name/.config/ и всего её содержимого пользователю..."
 
 
 
 echo ""
 
 echo "Запись следующего скрипта в i3 для запуска..."
-echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/danil/.config/i3/config
+echo "exec --no-startup-id xterm -e sh /opt/scripts/reboot_2.sh" >> /home/$name/.config/i3/config
 
 echo ""
 echo "Передача следующего скрипта пользователю..."
 
-chown danil /opt/scripts/reboot_2.sh
+chown $name /opt/scripts/reboot_2.sh
 
 echo ""
 
