@@ -41,6 +41,7 @@ layers:
     q: right
     r: left
     apostrophe: enter
+    n: leftalt+n
     k: leftalt+k
     slash: multi leftalt; slash
     i: esc
