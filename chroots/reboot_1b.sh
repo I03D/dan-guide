@@ -23,6 +23,7 @@ echo ""
 echo "Введите имя нового пользователя с правами sudo:"
 read -e name
 useradd -m $name
+export name
 
 echo ""
 
@@ -102,7 +103,8 @@ echo "Установка python-pystray, необходимого для LifePar
 pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu-gtk3 libgirepository libimagequant libraqm openjpeg2 python-packaging libappindicator-gtk3 python-gobject python-pillow python-six python-xlib python-build python-installer python-wheel python-setuptools python-sphinx
 git clone https://aur.archlinux.org/python-pystray
 chown $name python-pystray
-sh /root/DanOS/install-pystray.sh
+cd python-pystray
+sh /root/DanOS/.install-pystray.sh
 cd ~/
 
 echo ""
