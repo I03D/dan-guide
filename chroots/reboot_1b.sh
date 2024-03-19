@@ -342,18 +342,18 @@ git clone https://github.com/jbensmann/mouseless.git
 echo ""
 
 echo "Создание папки конфигурации..."
+mkdir /root/.config/mouseless/
 
 echo ""
 
-mkdir /home/$name/.config/mouseless/
 echo "Перемещение конфигурации из DanOS в систему..."
-
-echo ""
 
 # mv /root/DanOS/mouseless/ /home/$name/.config/mouseless
 mv /root/DanOS/mouseless/config.yaml /root/.config/mouseless/config.yaml
-echo "Перемещение mouseless в /bin..."
 
+echo ""
+
+echo "Перемещение mouseless в /bin..."
 mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
 
 echo ""
