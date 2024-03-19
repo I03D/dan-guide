@@ -98,14 +98,11 @@ cd /home/danil
 
 echo ""
 
-
 echo "Установка python-pystray, необходимого для LifePart..."
 pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu-gtk3 libgirepository libimagequant libraqm openjpeg2 python-packaging libappindicator-gtk3 python-gobject python-pillow python-six python-xlib python-build python-installer python-wheel python-setuptools python-sphinx
 git clone https://aur.archlinux.org/python-pystray
 chown danil python-pystray
-cd python-pystray
-su -c "makepkg -sf" danil
-pacman -U *.pkg* --noconfirm
+sh /root/DanOS/install-pystray.sh
 cd ~/
 
 echo ""
