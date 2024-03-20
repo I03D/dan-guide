@@ -360,7 +360,7 @@ mv /root/DanOS/mouseless/config.yaml /root/.config/mouseless/config.yaml
 
 echo ""
 
-echo "Перемещение mouseless в /bin..."
+echo "Перемещение mouseless в /usr/local/bin/..."
 mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
 
 echo ""
