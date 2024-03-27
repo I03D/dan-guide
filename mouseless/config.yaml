@@ -90,25 +90,25 @@ layers:
 
 - name: aim
   bindings:
-    f:         multi layer mouse; exec xdotool mousemove 239  135
-    d:         multi layer mouse; exec xdotool mousemove 719  135
-    s:         multi layer mouse; exec xdotool mousemove 1199 135
-    a:         multi layer mouse; exec xdotool mousemove 1679 135
+    f:         multi layer mouse; exec xdotool mousemove 240  135
+    d:         multi layer mouse; exec xdotool mousemove 720  135
+    s:         multi layer mouse; exec xdotool mousemove 1200 135
+    a:         multi layer mouse; exec xdotool mousemove 1680 135
 
-    v:         multi layer mouse; exec xdotool mousemove 239  405
-    c:         multi layer mouse; exec xdotool mousemove 719  405
-    x:         multi layer mouse; exec xdotool mousemove 1199 405
-    z:         multi layer mouse; exec xdotool mousemove 1679 405
+    v:         multi layer mouse; exec xdotool mousemove 240  405
+    c:         multi layer mouse; exec xdotool mousemove 720  405
+    x:         multi layer mouse; exec xdotool mousemove 1200 405
+    z:         multi layer mouse; exec xdotool mousemove 1680 405
 
-    j:         multi layer mouse; exec xdotool mousemove 239  675
-    k:         multi layer mouse; exec xdotool mousemove 719  675
-    l:         multi layer mouse; exec xdotool mousemove 1199 675
-    semicolon: multi layer mouse; exec xdotool mousemove 1679 675
+    j:         multi layer mouse; exec xdotool mousemove 240  675
+    k:         multi layer mouse; exec xdotool mousemove 720  675
+    l:         multi layer mouse; exec xdotool mousemove 1200 675
+    semicolon: multi layer mouse; exec xdotool mousemove 1680 675
 
-    m:         multi layer mouse; exec xdotool mousemove 239  945
-    comma:     multi layer mouse; exec xdotool mousemove 719  945
-    dot:       multi layer mouse; exec xdotool mousemove 1199 945
-    slash:     multi layer mouse; exec xdotool mousemove 1679 945
+    m:         multi layer mouse; exec xdotool mousemove 240  945
+    comma:     multi layer mouse; exec xdotool mousemove 720  945
+    dot:       multi layer mouse; exec xdotool mousemove 1200 945
+    slash:     multi layer mouse; exec xdotool mousemove 1680 945
 
 - name: advanced-mouse
   passThrough: true
