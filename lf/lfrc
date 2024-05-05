@@ -28,5 +28,4 @@ map r mkdir
 map E push 5e
 map I push 5i
 
-cmd open $nvim $fx
-
+cmd open $nvim "$fx"
