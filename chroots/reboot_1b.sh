@@ -22,6 +22,9 @@ echo ""
 
 echo "Введите имя нового пользователя с правами sudo:"
 read -e name
+echo $name > /d_name
+chmod 777 /d_name
+
 useradd -m $name
 export name
 
