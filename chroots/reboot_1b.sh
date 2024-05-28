@@ -112,7 +112,7 @@ pacman -S --noconfirm gobject-introspection-runtime libdbusmenu-glib libdbusmenu
 git clone https://aur.archlinux.org/python-pystray
 chown $name python-pystray
 cd python-pystray
-sh /root/DanOS/.install-pystray.sh
+sh /root/dan-guide/.install-pystray.sh
 cd ~/
 
 echo ""
@@ -124,10 +124,6 @@ echo ""
 
 echo "Установка PulseAudio..."
 pacman -S --noconfirm pulseaudio
-
-echo ""
-
-# git clone https://github.com/i03d/DanOS.git
 
 echo ""
 
@@ -146,8 +142,8 @@ mkdir /home/$name/.config/i3 -p
 
 echo ""
 
-echo "Перемещение файлов i3 из DanOS..."
-mv /root/DanOS/i3/* /home/$name/.config/i3
+echo "Перемещение файлов i3 из dan-guide..."
+mv /root/dan-guide/i3/* /home/$name/.config/i3
 
 echo "Установка feh для установки изображения рабочего стола:"
 pacman -S --noconfirm feh
@@ -173,11 +169,11 @@ gap
 
 echo "Установка и настройка Dynamic-colors, небоходимого для переключения фона терминалов в реальном времени:"
 echo ""
-echo "Перемещение файлов dynamic-colors из DanOS..."
+echo "Перемещение файлов dynamic-colors из dan-guide..."
 
 echo ""
 
-mv /root/DanOS/dynamic-colors/ /etc/dynamic-colors/
+mv /root/dan-guide/dynamic-colors/ /etc/dynamic-colors/
 
 echo "Изменение прав доступа к /etc/dynamic-colors/colorscheme..."
 chmod 006 /etc/dynamic-colors/colorscheme
@@ -264,7 +260,7 @@ echo ""
 
 echo "Перемещение конфигурации \"Vimium C\" в папку конфигураций..."
 mkdir /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/ -p
-mv /root/DanOS/chromium/000003.log /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
+mv /root/dan-guide/chromium/000003.log /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Sync\ Extension\ Settings/hfjbmagddngcpeloejdejnfgbamkjaeg/
 
 echo ""
 
@@ -286,12 +282,12 @@ if [[ $colemak == "1" ]];
 then
     echo "Копирование конфигурации NeoVim в root и $name..."
     mkdir /root/.config/
-    cp /root/DanOS/nvim/ /home/$name/.config/nvim -r
-    cp /root/DanOS/nvim /root/.config/nvim -r
+    cp /root/dan-guide/nvim/ /home/$name/.config/nvim -r
+    cp /root/dan-guide/nvim /root/.config/nvim -r
     echo ""
     echo "Копирование конфигурации lf в root и $name..."
-    cp /root/DanOS/lf /home/$name/.config/lf/ -r
-    cp /root/DanOS/lf /root/.config/lf/ -r
+    cp /root/dan-guide/lf /home/$name/.config/lf/ -r
+    cp /root/dan-guide/lf /root/.config/lf/ -r
 fi
 
 echo ""
@@ -299,9 +295,9 @@ echo ""
 echo "Копирование файла конфигурации для клавиатуры X11..."
 if [[ $colemak == "1" ]];
 then
-    cp /root/DanOS/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
+    cp /root/dan-guide/.00-keyboard.conf_col /etc/X11/xorg.conf.d/00-keyboard.conf
 else
-    cp /root/DanOS/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
+    cp /root/dan-guide/.00-keyboard.conf_qwt /etc/X11/xorg.conf.d/00-keyboard.conf
 fi
 
 
@@ -333,20 +329,20 @@ mkdir /root/.config/mouseless/
 
 echo ""
 
-echo "Перемещение конфигурации из DanOS в систему..."
+echo "Перемещение конфигурации из dan-guide в систему..."
 
-# mv /root/DanOS/mouseless/ /home/$name/.config/mouseless
-mv /root/DanOS/mouseless/config.yaml /root/.config/mouseless/config.yaml
+# mv /root/dan-guide/mouseless/ /home/$name/.config/mouseless
+mv /root/dan-guide/mouseless/config.yaml /root/.config/mouseless/config.yaml
 
 echo ""
 
 echo "Перемещение mouseless в /usr/local/bin/..."
-mv /root/DanOS/mouseless/mouseless /usr/local/bin/mouseless
+mv /root/dan-guide/mouseless/mouseless /usr/local/bin/mouseless
 
 echo ""
 
 echo "Копирование службы автозапуска mouseless..."
-cp /root/DanOS/mouseless/mouseless.service /etc/systemd/system/mouseless.service
+cp /root/dan-guide/mouseless/mouseless.service /etc/systemd/system/mouseless.service
 
 echo ""
 
