@@ -306,7 +306,7 @@ smart_borders on
 hide_edge_borders smart
 default_border pixel 3
 
-# Возможно стоит объединить lightBg и bg, но это не точно, спать хочу.
+# Возможно стоит объединить lightBg и bg.
 bindcode Mod1+28 exec "sed -i -e '7s/.*/*.bg:           #dac94f/' -e '8s/.*/*.darkBg:       #dcac1e/' -e '9s/.*/*.lightBg:      #dac94f/' -e '10s/.*/*.textBg:       #000000/' -e '2s/.*/*.foreground:   #000000/' -e '3s/.*/*.background:   #ffffdd/' .Xresources && xrdb ~/.Xresources && ~/.config/i3/LightTheme.sh ; i3-msg reload"
 
 bindcode Mod1+29 exec "sed -i -e '7s/.*/*.bg:           #3c1400/' -e '8s/.*/*.darkBg:       #000000/' -e '9s/.*/*.lightBg:      #3c1400/' -e '10s/.*/*.textBg:       #695319/' -e '2s/.*/*.foreground:   #a5a2a2/' -e '3s/.*/*.background:   #090300/' .Xresources && xrdb ~/.Xresources && ~/.config/i3/DarkTheme.sh ; i3-msg reload"
