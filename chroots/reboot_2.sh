@@ -63,7 +63,7 @@ for module in /dan-guide/modules/*.sh; do
 done
 
 clear
-echo "
+echo ""
 
 
 echo "[Установка завершена, закройте все окна (alt + k),"
