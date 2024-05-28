@@ -53,6 +53,19 @@ echo "с помощью super+j / super+\;.]"
 read
 clear
 
+echo "Установка пользовательских скриптов..."
+echo ""
+
+for module in /DanOS/modules/*.sh; do
+    if [ -f "$module" ]; then
+        source "$module"
+    fi
+done
+
+clear
+echo "
+
+
 echo "[Установка завершена, закройте все окна (alt + k),"
 echo "чтобы увидеть рабочий стол с подсказками.]"
 read
