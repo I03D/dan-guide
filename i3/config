@@ -86,7 +86,6 @@ floating_modifier $mod
 bindcode $mod+36 exec i3-sensible-terminal
 bindcode mod1+57 exec xkb-switch -s "us(colemak_dh)" && i3lock -i ~/.config/i3/i3lock-background.png
 bindcode $mod+57 exec shutdown now
-# bindcode mod1+32 exec xkb-switch -s us && i3lock -i ~/Downloads/art-risunok-gory-rassvet-reka-derevia-oblaka-doma-priroda.png
 
 bindcode mod1+47 exec xkb-switch -s "ru"
 bindcode mod1+46 exec xkb-switch -s "us(colemak_dh)"
@@ -296,7 +295,7 @@ bindcode mod1+44 exec /bin/mouseless --config /home/danil/.config/mouseless/conf
 
 # bindcode mod1+44 exec "keynav \\"loadconfig /home/danil/.keynavrc2, start\\"" 
 
-exec_always feh --bg-scale ~/.config/i3/i3-background.png
+exec_always feh --bg-scale ~/wallpapers/day/day_sample.png
 
 exec --no-startup-id dunst -conf /home/danil/.config/dunst/rc.conf
 exec --no-startup-id kdeconnect-cli
