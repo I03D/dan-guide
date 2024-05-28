@@ -56,7 +56,7 @@ clear
 echo "Установка пользовательских скриптов..."
 echo ""
 
-for module in /DanOS/modules/*.sh; do
+for module in /dan-guide/modules/*.sh; do
     if [ -f "$module" ]; then
         source "$module"
     fi
