@@ -257,31 +257,8 @@ cp /usr/bin/xkb-switch /usr/local/bin/xkb-switch
 gap
 
 
-echo "Установка и настройка flatpak..."
-pacman -S --noconfirm flatpak
-flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo --if-not-exists
-
-
-gap
-
-
-flatpak install -y --noninteractive com.github.Eloston.UngoogledChromium
-
-echo ""
-
-echo "Копирование замены бинарного \"chromium\" в /usr/local/bin/ для адекватного запуска с аргументами в терминале..."
-cp /root/DanOS/chromium/chromium /usr/local/bin/chromium
-
-echo ""
-
-echo "Разрешение chromium на выполнение..."
-sudo chmod +x /usr/local/bin/chromium
-
-echo ""
-
-echo "Перемещение расширения \"Vimium C\" в папку расширений..."
-mkdir /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/ -p
-mv /root/DanOS/chromium/hfjbmagddngcpeloejdejnfgbamkjaeg/ /home/$name/.var/app/com.github.Eloston.UngoogledChromium/config/chromium/Default/Extensions/
+echo "Установка firefox..."
+pacman -S --noconfirm firefox
 
 echo ""
 
