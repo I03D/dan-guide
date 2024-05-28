@@ -1,3 +1,5 @@
+echo "testtest" > test.txt
+
 echo "Установка менеджера обоев fastfeh:"
 cd /opt/scripts/
 echo "Загрузка fastfeh..."
