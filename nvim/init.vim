@@ -1,5 +1,5 @@
 set background=light
-colorscheme gruvbox
+colorscheme vim
 nnoremap cO ce
 nnoremap cN cb
 nnoremap n h
