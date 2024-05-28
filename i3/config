@@ -1,4 +1,3 @@
-# Будет ли работать без этой команды?:
 exec_always xrdb ~/.Xresources
 
 set_from_resource $bg_col       .bg          #FF0000
