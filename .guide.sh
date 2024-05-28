@@ -105,8 +105,8 @@ read
 
 echo ""
 
-echo "Копирование DanOS в /mnt..."
-cp ../DanOS /mnt/root/ -r
+echo "Копирование dan-guide в /mnt..."
+cp ../dan-guide /mnt/root/ -r
 
 echo ""
 
