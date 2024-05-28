@@ -144,6 +144,7 @@ echo ""
 
 echo "Перемещение файлов i3 из dan-guide..."
 mv /root/dan-guide/i3/* /home/$name/.config/i3
+mv /root/dan-guide/wallpapers /home/$name/
 
 echo "Установка feh для установки изображения рабочего стола:"
 pacman -S --noconfirm feh
@@ -151,7 +152,7 @@ pacman -S --noconfirm feh
 echo ""
 
 echo "Изменение прав доступа к изображению рабочего стола для i3..."
-chmod 777 /home/$name/.config/i3/i3-background.png
+chmod -R 777 /home/$name/wallpapers/
 
 echo ""
 
