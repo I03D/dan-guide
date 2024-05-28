@@ -13,7 +13,7 @@ cd /etc/skel/
 echo "" >> .bashrc
 echo "xrandr() {" >> .bashrc
 echo "    /bin/xrandr \"\$@\"" >> .bashrc
-echo "    feh --bg-scale ~/.config/i3/i3-background.png" >> .bashrc
+echo "    feh --bg-scale ~/wallpapers/day/day_sample.png" >> .bashrc
 echo "}" >> .bashrc
 echo "" >> .bashrc
 cd ~
